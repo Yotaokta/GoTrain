@@ -14,7 +14,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
           rel="stylesheet">
 
-      <title>GoTrain - User Transaksi</title>
+      <title>GoTrain - Account Setting</title>
 
       <link href="assets/css/bootstrap.min.css" rel="stylesheet">
       <link rel="stylesheet" href="assets/css/board.css">
@@ -66,13 +66,13 @@
                       </li>
                   </a>
                   <a href="transaksi-user.html" class="menu-item">
-                      <li class="menu-option active">
+                      <li class="menu-option">
                           <i class="fas fa-money-bill-wave-alt"></i>
                           Transaksi
                       </li>
                   </a>
                   <a href="pengaturan.html" class="menu-item">
-                      <li class="menu-option">
+                      <li class="menu-option active">
                           <i class="fas fa-cog"></i>
                           Pengaturan
                       </li>
@@ -153,129 +153,75 @@
 
       <!-- main content -->
 
-      <main class="main-transaksi-section">
+      <main class="main-section me-4">
           <div class="heading-dashboard">
-              <h2>Transaksi</h2>
-              <p>Daftar Riwayat Pembelian Kelas Anda</p>
+              <h2>Pengaturan</h2>
+              <p>Semua Pengaturan Akun Anda Ada Disini</p>
           </div>
 
-          <div class="transaksi-container">
-
-              <form action="#" method="post">
-                  <input type="text" class="form-transaksi" name="kelas-transaksi" id=""
-                      placeholder="Temukan transaksimu disini">
-
-                  <button class="btn icon-cari">
-                      <i class="fas fa-search"></i>
-                  </button>
-
-              </form>
-
-              <div class="scrollmenu">
-                  <a href="learning-dashboard.html">Premium</a>
-                  <a href="learning-dashboard.html">Freemium</a>
-                  <a href="learning-dashboard.html">Gratis</a>
-                  <a href="learning-dashboard.html">Pending</a>
-                  <a href="learning-dashboard.html">Gagal</a>
+          <div class="card-setting-container d-flex flex-column flex-lg-row flex-md-row">
+              <div class="gambar-profil">
+                  <img src="assets/images/client-image.svg" width="100" height="100"
+                      class="img-fluid rounded-circle avatar" alt="avatar">
               </div>
 
-              <div class="card card-transaksi mt-4 mb-3">
-                  <div class="row g-0">
-                      <div class="col-md-2">
-                          <img src="assets/images/gambar-modul.jpg" class="img-fluid rounded-3 m-lg-3 m-md-3" alt="...">
-                      </div>
-
-                      <div class="col-md-9 col-lg-9 ms-lg-4 ms-md-4">
-
-                          <div class="card-body">
-
-                              <div class="heading-transaksi">
-                                  <h5 class="card-title">Fullstack Web Developer: Membuat Website Travel</h5>
-                                  <p class="card-text">28 Februari 2022</p>
-                              </div>
-
-                              <div class="badge-status d-flex justify-content-between mt-4">
-                                  <div class="status-transaksi">
-                                      <span class="badge bg-success">Sukses</span>
-                                      <span class="badge bg-warning">Pending Invoice</span>
-                                  </div>
-
-                                  <div class="pricing-kelas">
-                                      <span>Rp. 650.000</span>
-                                  </div>
-                              </div>
-
-                          </div>
-
-                      </div>
+              <div class="setting-biodata mt-4 mt-lg-0 mt-md-0 ms-0 ms-lg-4 ms-md-4 ms align-self-center">
+                  <div class="nama-member">
+                      <h4>Muhammad Yota Nehru Onodera</h4>
+                      <p>Menjadi member sejak : <span>28 Februari 2022</span></p>
                   </div>
-              </div>
 
-              <div class="card card-transaksi mt-4 mb-3">
-                  <div class="row g-0">
-                      <div class="col-md-2">
-                          <img src="assets/images/gambar-modul.jpg" class="img-fluid rounded-3 m-md-3 m-lg-3" alt="...">
-                      </div>
-
-                      <div class="col-md-9 col-lg-9 ms-lg-4 ms-md-4">
-
-                          <div class="card-body">
-
-                              <div class="heading-transaksi">
-                                  <h5 class="card-title">Fullstack Web Developer: Membuat Website Travel</h5>
-                                  <p class="card-text">28 Februari 2022</p>
-                              </div>
-
-                              <div class="badge-status d-flex justify-content-between mt-4">
-                                  <div class="status-transaksi">
-                                      <span class="badge bg-success">Sukses</span>
-                                      <a href="#" class="badge bg-primary text-white">Download Invoice</a>
-                                  </div>
-
-                                  <div class="pricing-kelas">
-                                      <span>Rp. 650.000</span>
-                                  </div>
-                              </div>
-
+                  <form action="#" method="post" class="form-setting">
+                      <div class="row g-3">
+                          <div class="col-lg-6 col-md-6 col-12">
+                              <input type="text" class="form-control" placeholder="username" aria-label="Username">
                           </div>
-
-                      </div>
-                  </div>
-              </div>
-
-              <div class="card card-transaksi mt-4 mb-3">
-                  <div class="row g-0">
-                      <div class="col-md-2">
-                          <img src="assets/images/gambar-modul.jpg" class="img-fluid rounded-3 m-md-3 m-lg-3" alt="...">
-                      </div>
-
-                      <div class="col-md-9 col-lg-9 ms-lg-4 ms-md-4">
-
-                          <div class="card-body">
-
-                              <div class="heading-transaksi">
-                                  <h5 class="card-title">Fullstack Web Developer: Membuat Website Travel</h5>
-                                  <p class="card-text">28 Februari 2022</p>
-                              </div>
-
-                              <div class="badge-status d-flex justify-content-between mt-4">
-                                  <div class="status-transaksi">
-                                      <span class="badge bg-success">Sukses</span>
-                                      <a href="#" class="badge bg-primary text-white">Download Invoice</a>
-                                  </div>
-
-                                  <div class="pricing-kelas">
-                                      <span>Rp. 650.000</span>
-                                  </div>
-                              </div>
-
+                          <div class="col-lg-6 col-md-6 col-12">
+                              <input type="email" class="form-control" placeholder="email" aria-label="Email">
                           </div>
-
                       </div>
-                  </div>
+                      <div class="row">
+                          <div class="col">
+                              <p class="text-secondary notice">*Harap gunakan username dan email yang saat ini
+                                  digunakan
+                              </p>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col">
+                              <button class="btn btn-rubah-data">Rubah Data Saya</button>
+                          </div>
+                      </div>
+                  </form>
+
               </div>
 
           </div>
+
+          <div class="card-setting">
+
+              <div class="reset-password-card">
+                  <img src="assets/images/icon.jpg" alt="icon-reset" width="100" height="100">
+                  <div class="bodycard">
+                      <h4>Reset Password</h4>
+                      <p>Rubah Password Akunmu</p>
+                      <a href="ubah-password.html" class="btn btn-reset">Rubah</a>
+                  </div>
+              </div>
+
+              <div class="reset-password-card">
+                  <img src="assets/images/membership.jpg" alt="icon-reset" width="100" height="100">
+                  <div class="bodycard">
+                      <h4>Status Membership</h4>
+                      <p>Non Membership (on premise)</p>
+                  </div>
+              </div>
+
+
+          </div>
+
+
+
       </main>
 
       <!-- end main content -->
