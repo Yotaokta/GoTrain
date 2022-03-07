@@ -926,7 +926,7 @@ About Us
 */
 
 .about-us {
-  padding-top: 130px;
+  padding-top: 85px;
   position: relative;
 }
 
@@ -953,10 +953,10 @@ About Us
 }
 
 .about-us .box-item {
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
-  padding: 10px 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.06);
+  padding: 20px 30px;
   background-color: #fff;
-  border-radius: 40px;
+  border-radius: 50px;
   margin-bottom: 30px;
 }
 
@@ -1005,7 +1005,7 @@ The Clients
 
 .the-clients .section-heading {
   text-align: left;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .the-clients .section-heading h4 {
@@ -1014,128 +1014,75 @@ The Clients
   line-height: 50px;
 }
 
-.the-clients .naccs {
+.testimonial {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.06);
+  padding: 30px 30px 30px 130px;
+  margin: 20px 15px 0px 15px;
+  overflow: hidden;
   position: relative;
+  background-color: #fff;
+  border-radius: 10px;
 }
 
-.menu .thumb h4 {
-  margin-bottom: 0px;
-  font-size: 20px;
-  color: #2a2a2a;
-}
-
-.menu .thumb span.date {
-  display: inline-block;
-  margin-top: 0px;
-  color: #afafaf;
-}
-
-.menu .thumb span.category,
-.menu .thumb span.rating {
-  font-weight: 700;
-  color: #afafaf;
-}
-
-.menu .thumb i {
-  color: #afafaf;
-}
-
-.the-clients .naccs .menu div {
-  color: #fff;
-  font-size: 17px;
-  margin-bottom: 15px;
-  margin-top: 15px;
-  text-align: left;
-  cursor: pointer;
-  position: relative;
-  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.the-clients .naccs .menu div.active h4,
-.the-clients .naccs .menu div.active i,
-.the-clients .naccs .menu div.active span.rating,
-.the-clients .naccs .menu div.active .thumb {
-  color: #4b8ef1;
-}
-
-.the-clients ul.nacc {
-  position: relative;
-  min-height: 100%;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.the-clients ul.nacc li {
-  opacity: 0;
-  transform: translateX(-50px);
+.testimonial:before {
+  content: "";
   position: absolute;
-  list-style: none;
-  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  bottom: 0;
+  right: 0;
+  border-top: 25px solid #12a1da;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  transform: rotate(-45deg);
+  transform-origin: 80% -30% 0;
 }
 
-.the-clients ul.nacc li.active {
-  transition-delay: 0.3s;
-  position: relative;
-  z-index: 2;
-  opacity: 1;
-  transform: translateX(0px);
+.testimonial .pic {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 60px;
+  left: 20px;
 }
 
-.the-clients ul.nacc li {
-  width: 100%;
-}
-
-.the-clients .nacc .thumb .client-content img {
-  width: 76px;
-  height: 62px;
-}
-
-.the-clients .nacc .thumb .client-content {
-  padding: 60px 30px;
-  background-image: url(../images/client-bg.png);
-  background-size: cover;
-  border-radius: 50px;
+.testimonial .pic img {
   width: 100%;
   height: auto;
-  background-repeat: no-repeat;
 }
 
-.the-clients .nacc .thumb .client-content p {
-  color: #fff;
-  font-weight: 500;
-  font-size: 16px;
+.testimonial .description {
+  font-size: 15px;
   font-style: italic;
-  margin-top: 30px;
-}
-
-.the-clients .nacc .thumb .down-content {
-  margin-top: 30px;
-}
-
-.the-clients .nacc .thumb .down-content img {
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
-  display: inline;
-}
-
-.the-clients .nacc .thumb .down-content .right-content {
-  display: inline-block;
-  margin-left: 30px;
-}
-
-.the-clients .nacc .thumb .down-content .right-content h4 {
-  font-size: 20px;
-  font-weight: 700;
+  color: #918686;
+  line-height: 25px;
   margin-bottom: 15px;
 }
 
-.the-clients .nacc .thumb .down-content .right-content span {
-  color: #2a2a2a;
+.testimonial .title {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  color: #13add4;
+  margin: 0;
 }
 
+.owl-carousel {
+  -ms-touch-action: none;
+  touch-action: none;
+}
+
+.owl-theme .owl-controls .owl-page span {
+  border: 2px solid #e7e7e7;
+  background: #fff;
+  opacity: 1;
+}
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls .owl-page:hover span {
+  background: #3d3d3d;
+}
 
 
 /* 
@@ -1223,7 +1170,7 @@ footer {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 130px;
+  margin-top: 40px;
   padding-top: 300px;
   padding-bottom: 60px;
 }
@@ -1413,13 +1360,8 @@ responsive
     margin-bottom: 30px;
   }
 
-  .about-us .section-heading {
-    margin-bottom: 60px;
-  }
-
   p.member-jargon {
-    margin-top: 30px;
-    line-height: 30px;
+    line-height: 25px;
   }
 
   .service-item {
@@ -1583,6 +1525,26 @@ responsive
 
 @media (max-width: 767px) {
 
+  .testimonial {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .testimonial .pic {
+    display: block;
+    position: static;
+    margin: 0 auto 15px;
+  }
+
+  .the-clients .section-heading {
+    padding-left: 10px;
+  }
+
+  .the-clients .section-heading h4 {
+    font-size: 1.6em;
+    line-height: 40px;
+  }
+
   .main-banner {
     text-align: left;
     padding: 170px 0px 30px 10px;
@@ -1633,15 +1595,17 @@ responsive
   }
 
   footer {
-    padding-top: 0px;
-    text-align: center;
+    padding-top: 250px;
+    padding-left: 10px;
+    text-align: left;
+    background-position: right bottom;
+    margin-top: 0px;
   }
 
   .footer-widget ul {
     display: block;
     width: 100%;
-    float: none;
-    text-align: center;
+    text-align: left;
     margin: 0 auto;
   }
 
@@ -1716,12 +1680,24 @@ responsive
     float: none;
   }
 
+  .about-us .section-heading h2 {
+    font-size: 2em;
+    line-height: 47px;
+  }
+
+  .about-us .section-heading p {
+    font-size: 13px;
+    line-height: 27px;
+  }
+
   .our-portfolio .section-heading,
-  .about-us .section-heading,
   .about-us .about-item,
-  .about-us p,
   .about-us .main-green-button {
     text-align: center;
+  }
+
+  p.member-jargon {
+    text-align: left;
   }
 
   .our-portfolio .section-heading .line-dec {
@@ -1764,6 +1740,13 @@ responsive
   .about-us .about-item {
     margin-top: 15px;
   }
+
+  .about-us {
+    padding-top: 85px;
+    padding-left: .6rem;
+    padding-right: .6rem;
+  }
+
 }
 
 @media (max-width: 991px) {
