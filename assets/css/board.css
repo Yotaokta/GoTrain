@@ -172,46 +172,37 @@ section.sidebar-container ul a:hover {
 
 /* daftar kelas user */
 
+div.list-kelas-container {
+    padding-bottom: 3%;
+}
 
-.card-container {
-    background-color: #fff;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.06);
+div.list-kelas-container .list-kelas li.card-container {
+    display: flex;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.06);
     border-radius: 10px;
-    margin-right: 20px;
+    padding: 20px;
+    column-gap: 25px;
+    margin-bottom: 20px;
 }
 
-.card-container img {
+div.list-kelas-container .list-kelas li.card-container img.thumbnail-kelas-saya {
+    height: 50%;
+    width: 200px;
     border-radius: 10px;
-    width: 230px;
-    height: 200px;
 }
 
-.card-container .card-class-desc {
-    margin-left: 30px;
+div.list-kelas-container .list-kelas li.card-container .card-body-kelas p {
+    color: #919191;
 }
 
-.card-container .card-class-desc h1 {
-    font-size: 27px;
+div.list-kelas-container .list-kelas li.card-container .card-body-kelas {
+    padding-right: 60px;
 }
 
-.card-container .card-class-desc p {
-    color: #a7a7a7;
-    font-weight: 400;
-    font-size: 15px;
-}
-
-.judul-card {
-    padding-right: 255px;
-    line-height: 25px;
-}
 
 /* end daftar kelas user */
 
 /* end main content */
-
-
-
-
 
 
 /* Dashboard Transaksi User */
@@ -483,6 +474,35 @@ div.list-modul-scroll {
 /* responsive */
 
 @media screen and (max-width:821px) {
+
+    div.list-kelas-container {
+        padding-bottom: 6%;
+    }
+
+    div.list-kelas-container .list-kelas li.card-container .card-body-kelas {
+        padding-right: 0px;
+    }
+
+    div.list-kelas .card-container {
+        padding: 30px;
+    }
+
+    div.list-kelas-container .list-kelas li.card-container img.thumbnail-kelas-saya {
+        width: 30%;
+        height: 20%;
+        border-radius: 7px;
+    }
+
+    div.list-kelas-container .list-kelas li.card-container .heading-kelas-card h3 {
+        font-size: 20px;
+    }
+
+    div.list-kelas-container .list-kelas li.card-container .heading-kelas-card p {
+        font-size: 12px;
+        color: #a7a7a7;
+        padding-right: 10px;
+    }
+
     .card-setting {
         column-gap: 35px;
         padding-bottom: 100px;
@@ -610,6 +630,24 @@ div.list-modul-scroll {
 }
 
 @media screen and (max-width:767px) {
+
+    div.list-kelas-container {
+        padding-bottom: 25%;
+    }
+
+    div.list-kelas-container .list-kelas li.card-container {
+        display: block;
+    }
+
+    div.list-kelas-container .list-kelas li.card-container img.thumbnail-kelas-saya {
+        width: 100%;
+        height: 50%;
+    }
+
+    div.list-kelas-container .list-kelas li.card-container .card-body-kelas {
+        margin-top: 20px;
+        padding-right: 10px;
+    }
 
     div.kontent-tab {
         height: 30vh;

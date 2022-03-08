@@ -90,12 +90,12 @@
       <div class="navbar-container">
 
           <div class="name-brand">
-              <div class="greeting d-block">
+              <div class="greeting d-none">
                   <i class="fas fa-cloud-moon me-2" style="color: rgb(124, 43, 255);"></i>
                   Sudah Waktunya Istirahat
               </div>
 
-              <div class="d-none">
+              <div class="d-block">
                   <i class="fas fa-cloud-sun me-2" style="color: gold;"></i>
                   Selamat Pagi
               </div>
@@ -154,7 +154,7 @@
       <!-- main content -->
 
       <main class="main-section">
-          <div class="heading-dashboard">
+          <div class="heading-dashboard me-4">
               <h2>Kelas Saya</h2>
               <p>Upgrade ilmu dan pengetahuan
                   terbaru kamu di bidang yang kamu sukai</p>
@@ -169,25 +169,67 @@
               <a href="learning-dashboard.html">Selesai</a>
           </div>
 
-          <div class="list-kelas-container mt-4">
+          <div class="list-kelas-container mt-5 me-lg-5 me-md-3 me-3">
               <ul class="list-kelas">
 
-                  <li class="card-container p-4 d-flex mb-3">
-                      <img src="assets/images/gambar-modul.jpg" alt="gambar-modul" width="200" height="200">
-                      <div class="card-class-desc d-flex flex-column justify-content-between">
-                          <div class="judul-card">
-                              <h1>Fullstack Web Developer: Membuat Website Travel</h1>
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero tenetur culpa dolore
-                                  est quisquam dolorum!</p>
+                  <li class="card-container">
+                      <img src="assets/images/gambar-modul.jpg" class="img-fluid thumbnail-kelas-saya"
+                          alt="thumbnail-modul">
+                      <div class="card-body-kelas">
+                          <div class="heading-kelas-card">
+                              <h3>Fullstack Web Developer: Membuat Website Travel</h3>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, inventore fugit.
+                                  Rerum iste facilis unde illo nihil, totam est itaque officia aspernatur minus
+                                  molestias placeat, accusantium blanditiis vel ipsam ducimus.</p>
                           </div>
-                          <div class="kategori-kelas">
-                              <span class="badge fw-normal bg-primary">Intermediate</span>
-                              <span class="badge fw-normal bg-primary">Web Developer</span>
+                          <div class="kategori-kelas-card">
+                              <span class="badge bg-primary">Intermediate</span>
+                              <span class="badge bg-primary">Web Developer</span>
+                          </div>
+                      </div>
+                  </li>
+
+                  <li class="card-container">
+                      <img src="assets/images/gambar-modul.jpg" class="img-fluid thumbnail-kelas-saya"
+                          alt="thumbnail-modul">
+                      <div class="card-body-kelas">
+                          <div class="heading-kelas-card">
+                              <h3>Fullstack Web Developer: Membuat Website Travel</h3>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, inventore fugit.
+                                  Rerum iste facilis unde illo nihil, totam est itaque officia aspernatur minus
+                                  molestias placeat, accusantium blanditiis vel ipsam ducimus.</p>
+                          </div>
+                          <div class="kategori-kelas-card">
+                              <span class="badge bg-primary">Intermediate</span>
+                              <span class="badge bg-primary">Web Developer</span>
+                          </div>
+                      </div>
+                  </li>
+
+                  <li class="card-container">
+                      <img src="assets/images/gambar-modul.jpg" class="img-fluid thumbnail-kelas-saya"
+                          alt="thumbnail-modul">
+                      <div class="card-body-kelas">
+                          <div class="heading-kelas-card">
+                              <h3>Fullstack Web Developer: Membuat Website Travel</h3>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, inventore fugit.
+                                  Rerum iste facilis unde illo nihil, totam est itaque officia aspernatur minus
+                                  molestias placeat, accusantium blanditiis vel ipsam ducimus.</p>
+                          </div>
+                          <div class="kategori-kelas-card">
+                              <span class="badge bg-primary">Intermediate</span>
+                              <span class="badge bg-primary">Web Developer</span>
                           </div>
                       </div>
                   </li>
 
               </ul>
+
+              <!-- jika kelas sudah paling ujung dan tidak ada lagi kelasnya -->
+              <div class="greeting-bottom-kelas d-flex justify-content-center align-center mt-2 mt-lg-5 mt-md-3">
+                  <p style="color:rgb(202, 202, 202);">Anda Sudah Mencapai Batas Halaman Ini</p>
+              </div>
+
           </div>
 
       </main>

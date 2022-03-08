@@ -5,6 +5,7 @@ div.detail-kelas-container {
     margin-top: 180px;
 }
 
+
 div.kelas-detail {
     padding-right: 40px;
 }
@@ -15,6 +16,12 @@ div.detail-kelas-container h2 {
     font-weight: 500;
     font-size: 35px;
 }
+
+/* div.statistic-kelas-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+} */
 
 div.statistic-kelas-container .detail-kelas h5 {
     font-size: 15px;
@@ -66,7 +73,7 @@ img.profil-review {
 
 div.kelas-testimonial {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     padding-left: 10px;
 }
 
@@ -124,10 +131,18 @@ div.deskrispi-singkat-kelas ul.list-desc li {
 
 
 
+
+
 /* end detail kelas style */
 
 
 /* responsive */
+
+@media screen and (min-width:820px) {
+    div.detail-kelas-container {
+        margin-top: 135px;
+    }
+}
 
 @media screen and (min-width:767px) and (max-width:821px) {
     div.kelas-detail {
@@ -136,6 +151,30 @@ div.deskrispi-singkat-kelas ul.list-desc li {
 
     div.pricing-kelas {
         margin-top: 20px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    div.kelas-detail {
+        padding: 0px;
+    }
+
+    div.detail-kelas-container {
+        margin-top: 137px;
+    }
+
+    div.pricing-kelas {
+        margin-top: 20px;
+    }
+
+    div.detail-kelas-container h2 {
+        padding-right: 11px;
+        line-height: 40px;
+        font-size: 28px;
+    }
+
+    iframe.video-preview {
+        height: 250px;
     }
 }
 
