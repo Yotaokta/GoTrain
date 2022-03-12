@@ -14,7 +14,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
           rel="stylesheet">
 
-      <title>GoTrain - Dashboard Learning</title>
+      <title>GoTrain - Dashboard User</title>
 
       <link href="assets/css/bootstrap.min.css" rel="stylesheet">
       <link rel="stylesheet" href="assets/css/board.css">
@@ -48,13 +48,13 @@
           <div class="list-container">
               <ul class="menubar">
                   <a href="dashboard-user.html" class="menu-item">
-                      <li class="menu-option">
+                      <li class="menu-option active">
                           <i class="fas fa-home"></i>
                           Dashboard
                       </li>
                   </a>
                   <a href="learning-dashboard.html" class="menu-item">
-                      <li class="menu-option active">
+                      <li class="menu-option">
                           <i class="fas fa-chalkboard-teacher"></i>
                           Kelas Saya
                       </li>
@@ -90,12 +90,12 @@
       <div class="navbar-container">
 
           <div class="name-brand">
-              <div class="greeting d-block">
+              <div class="greeting d-none">
                   <i class="fas fa-cloud-moon me-2" style="color: rgb(124, 43, 255);"></i>
                   Sudah Waktunya Istirahat
               </div>
 
-              <div class="d-none">
+              <div class="d-block">
                   <i class="fas fa-cloud-sun me-2" style="color: gold;"></i>
                   Selamat Pagi
               </div>
@@ -134,11 +134,10 @@
 
               </div>
           </div>
-
       </div>
 
       <!-- navbar-mobile  -->
-      <nav class="navbar bg-nav-mobile navbar-expand fixed-bottom d-block d-md-none  d-lg-none d-xl-none">
+      <nav class="navbar bg-nav-mobile navbar-expand fixed-bottom d-block d-lg-none d-xl-none">
           <ul class="navbar-nav nav-justified w-100">
 
               <li class="nav-item">
@@ -182,81 +181,121 @@
 
       <!-- main content -->
 
-      <main class="main-section">
+      <main class="main-section me-3">
+
           <div class="heading-dashboard me-4">
-              <h2>Kelas Saya</h2>
-              <p>Upgrade ilmu dan pengetahuan
-                  terbaru kamu di bidang yang kamu sukai</p>
+              <h2>Dashboard <span class="nama">Yota</span></h2>
+              <p>Ini yang kami dapatkan untukmu hari ini</p>
           </div>
 
-          <div class="scrollmenu">
-              <a href="learning-dashboard.html">Kelas Saya</a>
-              <a href="learning-dashboard.html">Premium</a>
-              <a href="learning-dashboard.html">Freemium</a>
-              <a href="learning-dashboard.html">Gratis</a>
-              <a href="learning-dashboard.html">Learning Path</a>
-              <a href="learning-dashboard.html">Selesai</a>
+          <div class="card-status-user">
+
+              <div class="col-card-status card-1">
+                  <div class="card-heading">
+                      <h4>Kelas Tuntas</h4>
+                      <p>4<span>/10</span></p>
+                  </div>
+                  <img src="assets/images/checklist icon.svg" class="img-fluid align-self-center me-3" alt="icon-card">
+              </div>
+
+              <div class="col-card-status card-2">
+                  <div class="card-heading">
+                      <h4>Jumlah Kelas</h4>
+                      <p>7</p>
+                  </div>
+                  <img src="assets/images/kelas icon.svg" class="img-fluid align-self-center me-4" alt="icon-card">
+              </div>
+
+              <div class="col-card-status card-3">
+                  <div class="card-heading">
+                      <h4>Invoice Pending</h4>
+                      <p>0<span>/8</span></p>
+                  </div>
+                  <img src="assets/images/invoice icon.svg" class="img-fluid align-self-center me-4" alt="icon-card">
+              </div>
+
+              <div class="col-card-status card-4">
+                  <div class="card-heading">
+                      <h4>Kupon Kelas</h4>
+                      <p>4<span>/10</span></p>
+                  </div>
+                  <img src="assets/images/coupon icon.svg" class="img-fluid align-self-center me-4" alt="icon-card">
+              </div>
+
           </div>
 
-          <div class="list-kelas-container mt-5 me-lg-5 me-md-3 me-3">
-              <ul class="list-kelas">
+          <div class="card-kelas-akses">
+              <h5>Baru saja diakses</h5>
 
-                  <li class="card-container">
-                      <img src="assets/images/gambar-modul.jpg" class="img-fluid thumbnail-kelas-saya"
-                          alt="thumbnail-modul">
-                      <div class="card-body-kelas">
-                          <div class="heading-kelas-card">
-                              <h3>Fullstack Web Developer: Membuat Website Travel</h3>
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, inventore fugit.
-                                  Rerum iste facilis unde illo nihil, totam est itaque officia aspernatur minus
-                                  molestias placeat, accusantium blanditiis vel ipsam ducimus.</p>
-                          </div>
-                          <div class="kategori-kelas-card">
-                              <span class="badge bg-primary">Intermediate</span>
-                              <span class="badge bg-primary">Web Developer</span>
+              <div class="mt-3">
+                  <div class="row kelas-recent">
+
+                      <div class="col-lg-4">
+                          <div class="card card-recent-kelas mb-3">
+                              <div class="row g-0">
+                                  <div class="col-md-4">
+                                      <img src="assets/images/gambar-modul.jpg"
+                                          class="thumbnail-kelas-recent img-fluid rounded-start"
+                                          alt="thumbnail-shortcut">
+                                  </div>
+                                  <div class="col-md-8">
+                                      <div class="card-body">
+                                          <a href="" class="text-dark">
+                                              <h5 class="card-title">Fullstack Website Developer: Membuat Website Travel
+                                              </h5>
+                                              <p class="card-text"><small class="text-muted">3 mins yang lalu</small>
+                                              </p>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
                           </div>
                       </div>
-                  </li>
 
-                  <li class="card-container">
-                      <img src="assets/images/gambar-modul.jpg" class="img-fluid thumbnail-kelas-saya"
-                          alt="thumbnail-modul">
-                      <div class="card-body-kelas">
-                          <div class="heading-kelas-card">
-                              <h3>Fullstack Web Developer: Membuat Website Travel</h3>
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, inventore fugit.
-                                  Rerum iste facilis unde illo nihil, totam est itaque officia aspernatur minus
-                                  molestias placeat, accusantium blanditiis vel ipsam ducimus.</p>
-                          </div>
-                          <div class="kategori-kelas-card">
-                              <span class="badge bg-primary">Intermediate</span>
-                              <span class="badge bg-primary">Web Developer</span>
-                          </div>
-                      </div>
-                  </li>
-
-                  <li class="card-container">
-                      <img src="assets/images/gambar-modul.jpg" class="img-fluid thumbnail-kelas-saya"
-                          alt="thumbnail-modul">
-                      <div class="card-body-kelas">
-                          <div class="heading-kelas-card">
-                              <h3>Fullstack Web Developer: Membuat Website Travel</h3>
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, inventore fugit.
-                                  Rerum iste facilis unde illo nihil, totam est itaque officia aspernatur minus
-                                  molestias placeat, accusantium blanditiis vel ipsam ducimus.</p>
-                          </div>
-                          <div class="kategori-kelas-card">
-                              <span class="badge bg-primary">Intermediate</span>
-                              <span class="badge bg-primary">Web Developer</span>
+                      <div class="col-lg-4">
+                          <div class="card card-recent-kelas mb-3">
+                              <div class="row g-0">
+                                  <div class="col-md-4">
+                                      <img src="assets/images/gambar-modul.jpg" class="h-100 img-fluid rounded-start"
+                                          alt="thumbnail-shortcut">
+                                  </div>
+                                  <div class="col-md-8">
+                                      <div class="card-body">
+                                          <a href="" class="text-dark">
+                                              <h5 class="card-title">Fullstack Website Developer: Membuat Website Travel
+                                              </h5>
+                                              <p class="card-text"><small class="text-muted">3 mins yang lalu</small>
+                                              </p>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
                           </div>
                       </div>
-                  </li>
 
-              </ul>
+                      <div class="col-lg-4">
+                          <div class="card card-recent-kelas mb-3">
+                              <div class="row g-0">
+                                  <div class="col-md-4">
+                                      <img src="assets/images/gambar-modul.jpg" class="h-100 img-fluid rounded-start"
+                                          alt="thumbnail-shortcut">
+                                  </div>
+                                  <div class="col-md-8">
+                                      <div class="card-body">
+                                          <a href="" class="text-dark">
+                                              <h5 class="card-title">Fullstack Website Developer: Membuat Website Travel
+                                              </h5>
+                                              <p class="card-text"><small class="text-muted">3 mins yang lalu</small>
+                                              </p>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
 
-              <!-- jika kelas sudah paling ujung dan tidak ada lagi kelasnya -->
-              <div class="greeting-bottom-kelas d-flex justify-content-center align-center mt-2 mt-lg-5 mt-md-3">
-                  <p style="color:rgb(202, 202, 202);">Anda Sudah Mencapai Batas Halaman Ini</p>
+
+                  </div>
               </div>
 
           </div>

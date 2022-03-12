@@ -130,6 +130,10 @@ section.sidebar-container ul a:hover {
     transition: all .5s;
 }
 
+div.nama-user:hover {
+    cursor: pointer;
+}
+
 .navbar-container .navbar-profile .profile-picture {
     background-color: #3a96ff;
     padding: 8px;
@@ -139,6 +143,30 @@ section.sidebar-container ul a:hover {
     display: none;
 }
 
+div.dropdown-container {
+    position: absolute;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.06);
+    margin-top: 16px;
+    border-radius: 10px;
+    width: 200px;
+    display: none;
+}
+
+div.dropdown-container ul li {
+    margin-top: 7px;
+    padding: 2px;
+}
+
+div.dropdown-container ul li a:hover {
+    color: #2e2e2e;
+}
+
+div.dropdown-container ul li:hover {
+    background-color: #e3f9ff;
+    border-radius: 2px;
+}
 
 
 /* end navbar */
@@ -372,15 +400,6 @@ div.modul-video iframe {
     margin-top: 15px;
 }
 
-div.tab-deskripsi-kelas ul li a.tab-kelas {
-    font-weight: 500;
-}
-
-div.tab-deskripsi-kelas ul li a.tab-kelas.active {
-    border-bottom: 2px solid #52c8ff;
-    padding-bottom: 10px;
-}
-
 div.kontent-tab {
     padding: 14px 10px 14px 0px;
     line-height: 26px;
@@ -461,19 +480,123 @@ div.list-child .judul-modul {
 }
 
 div.list-modul-scroll {
-    height: 600px;
+    height: 645px;
     overflow: auto;
     margin-top: 25px;
     padding-right: 7px;
+}
+
+button.nav-link {
+    color: #2e2e2e;
 }
 
 
 /* end playback kelas style */
 
 
+
+
+
+
+/* dashboard-user style */
+
+div.card-status-user {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+div.card-status-user div.col-card-status {
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.06);
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.card-status-user div.col-card-status div.card-heading {
+    padding: 20px;
+}
+
+div.card-status-user div.col-card-status div.card-heading h4 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+div.card-status-user div.col-card-status div.card-heading p {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 0rem;
+}
+
+div.card-status-user div.col-card-status div.card-heading p span {
+    font-size: 18px;
+    font-weight: 600;
+    color: #a7a7a7;
+}
+
+div.card-kelas-akses {
+    margin-top: 30px;
+}
+
+div.card-recent-kelas {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    border: none;
+}
+
+div.card-recent-kelas .col-md-4 img {
+    height: 100%;
+}
+
+div.card-recent-kelas .col-md-8 .card-body a h5 {
+    font-size: 18px;
+}
+
+
+
+/* end dashboard user style */
+
+
 /* responsive */
 
 @media screen and (max-width:821px) {
+
+    div.card-kelas-akses .kelas-recent {
+        padding-bottom: 20%;
+    }
+
+    div.card-status-user div.col-card-status {
+        width: 47% !important;
+        margin-right: 10px;
+    }
+
+    div.card-status-user {
+        flex-wrap: wrap;
+        gap: 0px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.card-status-user div.card-1 {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    div.card-status-user div.card-2 {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    div.card-status-user div.card-3 {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    div.card-status-user div.card-4 {
+        width: 50%;
+        margin-bottom: 20px;
+    }
 
     div.list-kelas-container {
         padding-bottom: 6%;
@@ -631,6 +754,25 @@ div.list-modul-scroll {
 
 @media screen and (max-width:767px) {
 
+    div.card-kelas-akses .kelas-recent {
+        padding-bottom: 30%;
+    }
+
+    div.card-recent-kelas .col-md-4 img {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px !important;
+        border-bottom-left-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+    }
+
+    div.card-status-user {
+        margin-top: 30px;
+    }
+
+    div.card-status-user div.col-card-status {
+        width: 100% !important;
+    }
+
     div.list-kelas-container {
         padding-bottom: 25%;
     }
@@ -650,7 +792,7 @@ div.list-modul-scroll {
     }
 
     div.kontent-tab {
-        height: 30vh;
+        height: 35vh;
     }
 
     div.kelas-detail-col .heading-dashboard .heading-kelas {
