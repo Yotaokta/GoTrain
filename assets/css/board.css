@@ -34,6 +34,7 @@ ul li {
 
 ul {
     padding-left: 0;
+    margin-bottom: 0;
 }
 
 a {
@@ -113,6 +114,14 @@ section.sidebar-container ul li:hover {
 
 section.sidebar-container ul a:hover {
     color: #2e2e2e;
+}
+
+div.footer-dash-user p {
+    font-size: 11px;
+}
+
+div.footer-dash-user {
+    color: #b9b9b9;
 }
 
 /* end sidebar */
@@ -196,7 +205,9 @@ div.dropdown-container ul li:hover {
     background-color: #FFF;
 }
 
-
+div.scrollmenu a:hover {
+    background-color: rgb(235, 246, 255);
+}
 
 /* daftar kelas user */
 
@@ -488,6 +499,10 @@ div.list-modul-scroll {
 
 button.nav-link {
     color: #2e2e2e;
+}
+
+div.heading-kelas-card h3 a {
+    transition: .4s;
 }
 
 

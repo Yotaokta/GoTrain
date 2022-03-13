@@ -2,6 +2,7 @@
 // Dual licensed under the MIT and GPL
 
 (function ($) {
+
     $.fn.extend({
         leanModal: function (options) {
             var defaults = {
@@ -51,4 +52,5 @@
             }
         }
     })
+
 })(jQuery);
