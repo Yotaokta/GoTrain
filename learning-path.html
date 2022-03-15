@@ -52,35 +52,52 @@
 
 
 <!-- ***** Header Area Start ***** -->
-<header class="bg-white header-area header-sticky">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <img src="assets/images/Logo GoTrain.svg" alt="GoTrain Logo">
-                    </a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                        <li class="scroll-to-section"><a href="katalog.html">Kelas</a></li>
-                        <li class="scroll-to-section"><a href="learning-path.html" class="active">Learning Path</a></li>
-                        <li class="scroll-to-section"><a href="about.html">Tentang Kami</a></li>
-                        <li>
-                            <div class="gradient-button"><a href="pages-register.html"><i class="fa fa-sign-in-alt"></i>
-                                    Daftar Gratis </a></div>
-                        </li>
-                    </ul>
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
-            </div>
+
+<div class="navbar-container">
+
+    <div class="navbar-logo d-flex justify-content-between align-items-center">
+        <a href="index.html">
+            <img src="assets/images/Logo GoTrain.svg" alt="logo gotrain">
+        </a>
+        <div class="menu-mobile d-block d-lg-none">
+            <i class="fas fa-bars fs-4"></i>
         </div>
     </div>
-</header>
+
+    <div class="navbar-link-container">
+        <div class="navbar-link">
+            <ul>
+                <a href="katalog.html" class="navbar-item-link">
+                    <li>Kelas</li>
+                </a>
+                <a href="learning-path.html" class="navbar-item-link">
+                    <li>Learning Path</li>
+                </a>
+                <a href="about-us.html" class="navbar-item-link">
+                    <li>Tentang Kami</li>
+                </a>
+            </ul>
+        </div>
+
+        <div class="navbar-validasi">
+
+            <div class="form-pencarian mt-4 mt-lg-0">
+                <form action="" class="form-container">
+                    <input type="text" name="cari-kelas" id="pencarian-kelas" placeholder="Cari javascript" autofocus>
+                    <button type="submit" class="btn btn-login">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="tombol-user">
+                <a href="pages-login.html" class="btn btn-login">Masuk</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
 <!-- ***** Header Area End ***** -->
 
 

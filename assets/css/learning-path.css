@@ -22,7 +22,7 @@
  }
 
  .content-2-2 .title-text {
-     padding-top: 5rem;
+     padding-top: 1rem;
      margin-bottom: 3rem;
  }
 
@@ -128,10 +128,6 @@
 
  /* detail kelas style */
 
- div.detail-kelas-container {
-     margin-top: 180px;
- }
-
  div.kelas-detail {
      padding-right: 40px;
  }
@@ -198,7 +194,7 @@
  }
 
  div.pricing-kelas {
-     margin-top: 180px;
+     margin-top: 70px;
      border: 1px solid #e7e7e7;
      border-radius: 10px;
      height: 50%;
@@ -254,7 +250,7 @@
 
  @media screen and (min-width:820px) {
      div.detail-kelas-container {
-         margin-top: 135px;
+         margin-top: 70px;
      }
  }
 
@@ -292,7 +288,7 @@
      }
 
      div.detail-kelas-container {
-         margin-top: 137px;
+         margin-top: 70px;
      }
 
      div.pricing-kelas {
