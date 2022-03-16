@@ -1006,6 +1006,10 @@ responsive
     background-color: #f2fcff;
   }
 
+  div.navbar-container div.navbar-link-container div.navbar-link ul a li.active {
+    background-color: #f2fcff;
+  }
+
   div.navbar-container div.navbar-link-container div.navbar-link ul a {
     color: #2e2e2e;
     font-weight: 500;
@@ -1048,12 +1052,12 @@ responsive
 
   div.navbar-container div.navbar-link-container {
     position: absolute;
-    margin-top: 80px;
+    margin-top: 73px;
     background-color: #fff;
     z-index: 9;
-    padding: 20px 30px;
+    padding: 20px 14px;
     width: 82%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.06);
     overflow: hidden;
     display: none;
   }
@@ -1097,10 +1101,10 @@ responsive
   div.navbar-container div.tombol-user {
     width: 100%;
     margin-top: 10px;
-    padding: 10px;
+    padding: 5px;
     background-color: #0042a5;
     text-align: center;
-    border-radius: 6px;
+    border-radius: 50px;
   }
 
   div.navbar-container div.tombol-user:hover {
@@ -1205,11 +1209,13 @@ responsive
   }
 
   div.navbar-container div.navbar-link-container {
-    width: 89%;
+    left: 0;
+    right: 0;
+    width: 100%;
   }
 
   div.navbar-container div.form-pencarian form input {
-    width: 79%;
+    width: 84%;
   }
 
   .jumbotron .heading-banner {
