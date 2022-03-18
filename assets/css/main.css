@@ -372,79 +372,56 @@ preloader
 
 /* 
 ---------------------------------------------
-Banner Style
+Slide-Banner Style
 --------------------------------------------- 
 */
 
-.main-banner {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  padding: 250px 120px 150px 120px;
-  position: relative;
-  overflow: hidden;
+
+div.slide-container {
+  margin: 30px 70px 10px 70px;
 }
 
-.main-banner:after {
-  content: '';
-  background-image: url(../images/slider-left-dec.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+div.carousel-inner {
+  border-radius: 15px;
+  height: 400px;
 }
 
-.main-banner .left-content {
-  margin-right: 15px;
+div.carousel-inner div.carousel-item a img.img-slides {
+  height: fit-content;
 }
 
-.main-banner .left-content h2 {
-  z-index: 2;
-  position: relative;
-  font-weight: 700;
-  line-height: 65px;
-  font-size: 42px;
-  margin-bottom: 20px;
-  color: rgb(255, 255, 255);
+.carousel-indicators [data-bs-target] {
+  border-top: 0;
+  border-bottom: 0;
+  border-radius: 20px;
+  height: 10px;
+  width: 10px;
+  background-color: #2a2a2a;
 }
 
-.main-banner .left-content p {
-  margin-bottom: 45px;
-  color: #ffffff;
-  font-weight: 300;
-  font-size: 17px;
+.carousel-indicators {
+  bottom: 20px;
 }
 
-.main-banner .left-content .first-button {
-  margin-right: 15px;
+.carousel-control-next,
+.carousel-control-prev {
+  background-color: #ffffff;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  top: 45%;
+  bottom: 45%;
 }
 
-.main-banner .left-content .white-button {
-  display: inline-block;
+.carousel-control-next {
+  right: -20px;
 }
 
-.main-banner .right-image {
-  text-align: center;
-  position: relative;
-  z-index: 20;
-}
-
-.main-banner .right-image img {
-  max-width: 700px;
-}
-
-.main-banner .left-content .white-button a {
-  background-color: #0065d8;
-  color: #fff !important;
-}
-
-.main-banner .left-content .white-button a:hover {
-  background-color: #0058bd;
-  color: #fff !important;
+.carousel-control-prev {
+  left: -20px;
 }
 
 /* 
@@ -454,8 +431,13 @@ Services Style
 */
 
 .services {
-  padding-top: 130px;
+  padding-top: 65px;
   position: relative;
+}
+
+div.service-container {
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
 .services .section-heading {
@@ -961,6 +943,7 @@ footer p a:hover {
 
 div.background-header {
   position: fixed;
+  top: 0;
 }
 
 /* 
@@ -970,19 +953,6 @@ responsive
 */
 
 @media (min-width: 1200px) {
-
-  .main-banner .left-content h2 {
-    z-index: 2;
-    position: relative;
-    font-weight: 700;
-    line-height: 65px;
-    font-size: 45px;
-    margin-bottom: 20px;
-  }
-
-  .main-banner .left-content p {
-    margin-bottom: 45px;
-  }
 
   div.navbar-container div.navbar-link-container {
     display: flex;
@@ -1045,6 +1015,45 @@ responsive
 }
 
 @media (max-width: 992px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .mobile-top-fix {
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+
+  .mobile-bottom-fix {
+    margin-bottom: 30px;
+  }
+
+  .mobile-bottom-fix-big {
+    margin-bottom: 60px;
+  }
+
+
+  /* slider style home */
+
+  div.slide-container {
+    margin: 30px 30px 10px 30px;
+  }
+
+  div.carousel-inner {
+    border-radius: 15px;
+    height: 240px;
+  }
+
+  /* end slider home */
+
+
+  .services .section-heading h4 {
+    line-height: 60px;
+    font-size: 2.3em;
+    font-weight: 500;
+  }
 
   .jumbotron {
     margin-top: 50px;
@@ -1158,54 +1167,66 @@ responsive
     display: none;
   }
 
-  .main-banner .left-content {
-    margin-right: 0px;
-  }
-
-  .main-banner {
-    text-align: center;
-    padding: 80px 0px 30px 0px;
-  }
-
-  .main-banner:before {
-    display: none;
-  }
-
-  .main-banner .right-image {
-    margin: 30px auto 0px auto;
-    text-align: center;
-  }
-
-
-  .main-banner:after {
-    display: none;
-  }
-
-  .main-banner .left-content h2 {
-    color: #2a2a2a;
-    margin-right: 0;
-  }
-
-  .main-banner .left-content p {
-    color: #afafaf;
-    margin-right: 0;
-  }
-
-  .main-banner .left-content .white-button a {
-    background-color: #4b8ef1;
-    color: #fff !important;
-  }
-
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+
+
+  div.navbar-logo a img {
+    max-width: 150px;
+  }
+
+  /* banner slide style */
+
+  div.slide-container {
+    margin: 0px;
+  }
+
+  div.carousel-inner {
+    border-radius: 0px;
+    height: 27vh;
+  }
+
+  .carousel-indicators [data-bs-target] {
+    border-top: 0;
+    border-bottom: 0;
+    border-radius: 20px;
+    height: 6px;
+    width: 6px;
+    background-color: #2a2a2a;
+  }
+
+  .carousel-indicators {
+    bottom: 7px;
+    justify-content: unset;
+    margin-left: 7%;
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    display: none;
+  }
+
+  .carousel-control-next {
+    right: 10px;
+  }
+
+  .carousel-control-prev {
+    left: 10px;
+  }
+
+  /* end banner style */
+
+  div.kelas-container .header .heading-kelas h2 {
+    font-size: 28px;
+  }
 
   .jumbotron {
     margin-top: 50px;
   }
 
   div.navbar-container {
-    padding: 20px;
+    padding: 15px;
   }
 
   div.navbar-container div.navbar-link-container {
@@ -1246,31 +1267,9 @@ responsive
     line-height: 40px;
   }
 
-  .main-banner {
-    text-align: left;
-    padding: 73px 0px 30px 10px;
-  }
-
-  .main-banner .left-content h2 {
-    font-size: 30px;
-    font-weight: 500;
-    line-height: 40px;
-  }
-
-  .main-banner .left-content p {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 23px;
-  }
-
-  .main-banner .right-image img {
-    max-width: 370px;
-    margin-top: 20px;
-  }
-
   .services .section-heading h4 {
-    font-size: 34px;
-    line-height: 50px;
+    font-size: 25px;
+    line-height: 38px;
   }
 
   .services {
@@ -1309,10 +1308,6 @@ responsive
   .footer-widget h4 {
     margin-top: 45px;
     margin-bottom: 20px;
-  }
-
-  .main-banner .info-stat {
-    margin-bottom: 15px;
   }
 
   .menu .thumb span.date {
@@ -1373,7 +1368,7 @@ responsive
   }
 
   .about-us .section-heading h2 {
-    font-size: 2em;
+    font-size: 30px;
     line-height: 47px;
   }
 
@@ -1439,25 +1434,4 @@ responsive
     padding-right: .6rem;
   }
 
-}
-
-@media (max-width: 991px) {
-
-  html,
-  body {
-    overflow-x: hidden;
-  }
-
-  .mobile-top-fix {
-    margin-top: 30px;
-    margin-bottom: 0px;
-  }
-
-  .mobile-bottom-fix {
-    margin-bottom: 30px;
-  }
-
-  .mobile-bottom-fix-big {
-    margin-bottom: 60px;
-  }
 }
