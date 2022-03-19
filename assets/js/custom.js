@@ -10,7 +10,6 @@
     }
   });
 
-
   // Menu Dropdown Toggle
   $(".menu-mobile").on('click', function () {
     $('.navbar-link-container').fadeToggle(200);
@@ -21,16 +20,29 @@
     $('#js-preloader').addClass('loaded');
   });
 
-  $("#testimonial-slider").owlCarousel({
-    items: 2,
-    itemsDesktop: [1000, 2],
-    itemsDesktopSmall: [990, 1],
-    itemsTablet: [768, 1],
-    pagination: true,
-    navigation: false,
-    navigationText: ["", ""],
-    slideSpeed: 1000,
-    autoPlay: true
-  });
-
 })(jQuery);
+
+function alertTransaksi() {
+  const kelas = document.getElementById('transaksi').dataset.kelas;
+  swal({
+      title: "Ingin Lanjutkan Transaksi?",
+      text: "Anda akan di arahkan ke Whatsapp",
+      icon: "warning",
+      buttons: true,
+    })
+    .then((Result) => {
+      if (Result) {
+        window.location.href = `https://api.whatsapp.com/send?phone=+6285771944467&text=Hallo%20saya%20ingin%20membeli%20kelas%20${kelas}.`;
+      }
+    }).catch(
+      result => {
+        swal("Oops", "Transaksi Gagal Dilakukan", "error");
+      }
+    )
+}
+
+window.addEventListener('click', function (el) {
+  if (el.target.classList.contains('whatsapp-icon') || el.target.classList.contains('whatsapp-float')) {
+    window.location.href = 'https://api.whatsapp.com/send?phone=+6285771944467&text=Hallo%20saya%20ingin%20bertanya.'
+  }
+})
