@@ -162,7 +162,7 @@ a {
 
 .job-list-container {
   width: 30%;
-  padding: 30px 20px 30px 35px;
+  padding: 30px 20px 30px 15px;
 }
 
 .nav-job-recent {
@@ -172,6 +172,11 @@ a {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  display: flex;
+}
+
+.nav-job-recent-mobile {
+  display: none;
 }
 
 .nav-job-recent a {
@@ -189,7 +194,7 @@ a {
   margin-top: 10px;
   height: 500px;
   overflow: scroll;
-  padding: 0px 13px 0px 0px;
+  padding: 0px 8px 0px 0px;
 }
 
 .jobs-list::-webkit-scrollbar {
@@ -255,6 +260,42 @@ div.jobs-summary {
   display: none;
 }
 
+.jobs-details-container {
+  padding: 30px 20px 30px 15px;
+  background-color: #f1f1f1;
+  width: 70%;
+}
+
+.jobs-search-container {
+  background-color: #fff;
+  border-radius: 5px;
+  position: fixed;
+  width: 67%;
+}
+
+.jobs-keyword {
+  padding: 16px;
+  border: none;
+  font-weight: 500;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.jobs-keyword:focus {
+  outline: none;
+}
+
+.btn-jobs {
+  background-color: #253ad8;
+  color: #fff;
+  border: none;
+  width: 7%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 1.1em;
+}
 /* end job section list */
 
 /* responsive display */
@@ -375,13 +416,26 @@ div.jobs-summary {
   }
 
   .nav-job-recent {
-    position: absolute;
-    flex-direction: column;
-    right: 10px;
-    box-shadow: 0px 0px 5px rgba(61, 61, 61, 0.18);
+    display: none;
   }
 
-  .nav-job-recent a {
-    padding: 0px;
+  .nav-job-recent-mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #ffffff;
+    right: 10px;
+    box-shadow: 0px 0px 5px rgba(61, 61, 61, 0.18);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .nav-job-recent-mobile a {
+    padding: 14px 55px 14px 10px;
+  }
+
+  .nav-job-recent-mobile a.active {
+    background-color: #242f9b;
+    color: #fff;
   }
 }

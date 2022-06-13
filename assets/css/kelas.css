@@ -1,0 +1,125 @@
+/* styling global */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --btn-primary: #0073e9;
+  ---btn-secondary: #dedede;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.align-item-center {
+  align-items: center;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.gap-2 {
+  column-gap: 20px;
+}
+
+ul {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+/* end global styling */
+
+/* styling tombol create kelas */
+
+.kelas-create-container {
+  margin-top: 45px;
+}
+
+.kelas-create-container .tombol-create-kelas a.btn-kelas-create {
+  padding: 1em;
+  background-color: var(--btn-primary);
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.kelas-create-container .tombol-create-kelas a.btn-kelas-create:hover {
+  box-shadow: 0px 0px 7px #0075e99d;
+  transition: box-shadow 0.3s;
+}
+
+a.kelas-link.active {
+  background-color: #132340;
+  color: #32e2bf;
+}
+
+.headline p a:hover {
+  color: var(--btn-primary);
+  transition: color 0.2s ease-in;
+}
+
+/* end styling tombol create kelas */
+
+/* styling kelas list */
+
+.jumlah-kelas span i {
+  color: #08a73d;
+}
+
+.kelas-list-container {
+  margin-top: 35px;
+  margin-bottom: 20px;
+  padding: 30px;
+  background-color: #fff;
+}
+
+.kelas-list {
+  margin-top: 20px;
+}
+
+.kelas-list .kelas-card {
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.18);
+  padding: 12px 10px;
+  width: 100%;
+}
+
+.kelas-list .kelas-card .kelas-head {
+  width: 80%;
+}
+
+.kelas-list .kelas-card .kelas-head img {
+  border-radius: 5px;
+}
+
+.kelas-list .kelas-card .kelas-head .meta-kelas h3 {
+  font-weight: 500;
+}
+
+.kelas-list .kelas-card .kelas-head .meta-kelas ul {
+  margin-top: 6px;
+}
+
+.kelas-list .kelas-card .kelas-head .meta-kelas ul li {
+  margin-top: 5px;
+}
+
+/* end styling kelas list */

@@ -15,11 +15,9 @@
   <link rel="apple-touch-startup-image" href="assets/images/Logo Gotrain.png">
   <link rel="apple-touch-icon" href="assets/images/favicon.png">
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
   <link rel="stylesheet" href="assets/css/admin-board.css">
+  <link rel="stylesheet" href="assets/css/kelas.css">
 </head>
 
 <body>
@@ -33,7 +31,7 @@
 
     <div class="link-container">
       <div class="d-flex">
-        <a href="dashboard.html" class="link active">
+        <a href="dashboard.html" class="link">
           <i class="bi bi-house-door-fill"></i>
           <span class="ml-3">Beranda</span>
         </a>
@@ -51,7 +49,7 @@
             </div>
 
             <div class="d-flex">
-              <a href="kelas.html" class="kelas-link">
+              <a href="kelas.html" class="kelas-link active">
                 <i class="bi bi-hospital-fill"></i>
                 <span class="ml-3">Kelas</span>
               </a>
@@ -175,83 +173,50 @@
       <div class="banner d-flex">
 
         <div class="menu-logo">
-          <i class="bi bi-house-door-fill"></i>
+            <i class="bi bi-hospital-fill"></i>
         </div>
 
         <div class="headline">
-          <h2>GoTrain Dashboard</h2>
-          <p>Selamat Pagi, <span>Admin</span></p>
+          <h2>GoTrain Kelas</h2>
+          <p> <a href="dashboard.html">beranda</a> / <b>kelas</b></p>
         </div>
 
       </div>
     </div>
 
-    <div class="statistik-container">
-
-      <div class="statistik">
-        <h4>
-          <i class="bi bi-graph-up-arrow mr-1 green fw-1"></i>
-          Pendapatan Hari Ini
-        </h4>
-        <p>Rp. 120.000</p>
-      </div>
-
-      <div class="statistik">
-        <h4>
-          <i class="bi bi-graph-up-arrow mr-1 green fw-1"></i>
-          Pendapatan Bulan Ini
-        </h4>
-        <p>Rp. 520.000</p>
-      </div>
-
-      <div class="statistik">
-        <h4>
-          <i class="bi bi-box-arrow-in-up-right mr-1 green fw-1"></i>
-          Pending Transaksi
-        </h4>
-        <p>5</p>
-      </div>
-
-      <div class="statistik">
-        <h4>
-          <i class="bi bi-chat-dots mr-1 green fw-1"></i>
-          Komplain
-        </h4>
-        <p>10</p>
-      </div>
-
-    </div>
-
-    <div class="transaksi-util">
-      <div class="table-heading">
-        <span>4 Transaksi Baru Hari Ini</span>
-      </div>
-
-      <div class="transaction-container">
-
-        <div class="transaction-list d-flex">
-          <div class="nama-user">
-            <h4 class="nama-user mb-1">Nama</h4>
-            Muhammad Yota Nehru Onodera
-          </div>
-          <div class="nama-kelas">
-            <h4 class="nama-user mb-1">Kelas</h4>
-            Fullstack Web Developer
-          </div>
-          <div class="nominal">
-            <h4 class="nama-user mb-1">Nominal</h4>
-            Rp. 350.000
-          </div>
-          <div class="tombol-container d-flex">
-            <a href="#" class="btn-semi-primary mr-1">Detail</a>
-            <form action="#" method="post">
-              <button type="submit" class="btn btn-primary">Approve</button>
-            </form>
-          </div>
+    <div class="kelas-create-container d-flex justify-content-end">
+        <div class="tombol-create-kelas">
+            <a href="kelas-create.html" class="btn-kelas-create">Buat Kelas Baru</a>
         </div>
-
-      </div>
     </div>
+
+    <div class="kelas-list-container d-flex flex-direction-column">
+        <div class="jumlah-kelas">
+            <span>
+                <i class="bi bi-clipboard2-check-fill"></i>
+                10 Kelas Tersedia</span>
+        </div>
+        <div class="kelas-list d-flex flex-wrap">
+            <div class="kelas-card d-flex justify-content-between align-item-center">
+                <div class="kelas-head d-flex gap-2">
+                    <img class="align-self-center" src="assets/images/gambar-modul.jpg" width="140" height="90" alt="kelas-thumbnail">
+                    <div class="meta-kelas">
+                        <h3>Fullstack Web Developer Membuat Website Travel Dengan Laravel 9</h4>
+                        <ul>
+                            <li>Mentor : Yota Nehru</li>
+                            <li>Dibuat : 12 Juni 2022</li>
+                            <li>Status : Aktif</li>
+                        </ul>
+                    </div>
+                </div>
+                  <div class="btn-util-kelas">
+                        <a href="kelas-detail.html">Detail</a>
+                        <a href="kelas-detail.html">Suspend</a>
+                 </div>
+            </div>
+        </div>
+    </div>
+
 
     <footer class="footer">
       <div class="credit">
@@ -281,11 +246,9 @@
             Pengguna</a>
         </li>
         <li class="popup-link">
-          <form action="#" method="post">
-            <button type="submit">
-              <i class="bi bi-door-open-fill fw-1 mr-1"></i>
-              Logout</button>
-          </form>
+          <a href="logout.html">
+            <i class="bi bi-door-open-fill fw-1 mr-1"></i>
+            Logout</a>
         </li>
       </ul>
 

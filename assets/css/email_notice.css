@@ -1,0 +1,124 @@
+::-webkit-scrollbar {
+  width: 10px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(209, 234, 253);
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(199, 199, 199);
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  font-style: normal;
+  color: black;
+}
+
+.btn {
+  padding: 1em 2em;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn-primary {
+  background-color: rgb(27, 65, 235);
+  color: #fff;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: rgb(24, 56, 199);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-item-center {
+  align-items: center;
+}
+
+.text-info {
+  color: rgb(0, 173, 116);
+}
+
+.text-info:hover {
+  color: rgb(1, 138, 92);
+  text-decoration: underline;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-image: url("../images/Background\ Login.jpg");
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-color: #f9fafc;
+}
+
+.email-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.14);
+  padding: 15px 20px;
+  width: 500px;
+  flex-direction: column;
+  row-gap: 25px;
+}
+
+.message {
+  padding: 10px 20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+}
+
+.message p {
+  padding: 10px 0px 10px 0px;
+  width: 90%;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.message h4 {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 1000px) {
+  .email-container {
+    margin: 14px;
+  }
+
+  .message p {
+    padding: 0.7em 1em 0px 0px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 0.9em;
+  }
+}
