@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email - Gotrain Verification Account</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      background-color: rgb(246, 252, 255);
+    }
+
+    .email-container {
+      margin: 40px 50px;
+      padding: 20px 15px 0px 15px;
+      background-color: #fff;
+      border-radius: 8px;
+      border: 1px solid #dadada;
+      width: 40%;
+    }
+
+    .message h3 {
+      font-weight: 500;
+    }
+
+    .message p {
+      padding: 0px 30px 0px 0px;
+    }
+
+    form {
+      display: flex;
+    }
+
+    img.logo {
+      width: 150px;
+    }
+
+    .animation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    form button {
+      border-radius: 50px;
+      padding: 1.2em 2em;
+      width: 100%;
+      background-color: rgb(33, 82, 247);
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      border: none;
+      font-size: 1em;
+      margin: 20px 0px;
+      transition: background-color 0.3s;
+    }
+
+    form button:hover {
+      background-color: rgb(27, 71, 218);
+      cursor: pointer;
+    }
+
+    .footer {
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .footer p {
+      color: #adadad;
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 1000px) {
+      .email-container {
+        width: 80%;
+        margin: 40px 20px;
+      }
+
+      img {
+        width: 180px;
+      }
+    }
+  </style>
+
+  <body>
+    <div class="email-container">
+      <img
+        class="logo"
+        src="assets/images/Logo GoTrain.svg"
+        alt="logo-gotrain"
+      />
+      <div class="animation">
+        <img src="assets/images/success.gif" width="150" alt="" />
+      </div>
+      <div class="message">
+        <h3>Hai, Yota Nehru</h3>
+        <p>
+          Selamat bergabung di GoTrain, sebelum dimulai kamu harus aktivasi akun
+          terlebih dahulu ya, cukup klik tombol dibawah ini untuk aktivasi
+          akunmu. <br /><br />
+          Dan selamat belajar. <br />
+          Admin GoTrain
+        </p>
+        <form action="/account/verify/" method="post">
+          <button type="submit">Aktivasi Akun</button>
+        </form>
+      </div>
+
+      <div class="footer">
+        <p>Official GoTrain <span>@2022 All Right Reserved</span></p>
+      </div>
+    </div>
+  </body>
+</html>
