@@ -1,65 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="theme-color" content="#E7F8FF" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta
-      name="keyword"
-      content="Web Design, Web Development, Android, UI UX Design"
-    />
-    <meta
-      name="description"
-      content="Belajar membuat web, aplikasi android, dan mendesign UI UX"
-    />
-    <meta name="author" content="Yota Nehru" />
-    <link
-      rel="apple-touch-startup-image"
-      href="assets/images/Logo Gotrain.png"
-    />
-    <link rel="apple-touch-icon" href="assets/images/favicon.png" />
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css"
-    />
-    <title>GoTrain Jobs - Temukan Karirmu Disini</title>
-    <link rel="stylesheet" href="assets/css/jobs-style.css" />
-  </head>
 
-  <body>
-    <nav class="navbar d-flex justify-content-between align-item-center">
-      <div class="navbar-brand">
-        <a href="#">
-          <img src="assets/images/Logo GoJobs.svg" alt="gojobs-logo" />
-        </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#E7F8FF" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="keyword" content="Web Design, Web Development, Android, UI UX Design" />
+  <meta name="description" content="Belajar membuat web, aplikasi android, dan mendesign UI UX" />
+  <meta name="author" content="Yota Nehru" />
+  <link rel="apple-touch-startup-image" href="assets/images/Logo Gotrain.png" />
+  <link rel="apple-touch-icon" href="assets/images/favicon.png" />
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css" />
+  <title>GoTrain Jobs - Temukan Karirmu Disini</title>
+  <link rel="stylesheet" href="assets/css/jobs-style.css" />
+</head>
+
+<body>
+  <nav class="navbar d-flex justify-content-between align-item-center">
+    <div class="navbar-brand">
+      <a href="#">
+        <img src="assets/images/Logo GoJobs.svg" alt="gojobs-logo" />
+      </a>
+    </div>
+
+    <div class="navbar-link d-flex">
+      <a href="<?= site_url('/') ?>" class="">Beranda</a>
+      <a href="<?= site_url('/job-list') ?>" class="">Pekerjaan</a>
+      <a href="<?= site_url('/company') ?>" class="">Perusahaan</a>
+    </div>
+
+    <div class="tombol-utility d-flex align-item-center">
+      <a href="<?= site_url('/login') ?>" class="active btn-login">Login</a>
+      <a href="<?= site_url('/register') ?>" class="btn-sign-up">Daftar</a>
+      <a href="<?= site_url('/login') ?>" class="btn-post-job">Post Job</a>
+
+      <div class="menu-mobile" id="menu-mobile">
+        <i class="bi bi-three-dots mobile-menu"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div class="navbar-link-mobile" id="navbar-link-mobile">
+    <a href="<?= site_url('/') ?>">Beranda</a>
+    <a href="<?= site_url('/job-list') ?>">Pekerjaan</a>
+    <a href="<?= site_url('/company') ?>">Perusahaan</a>
+    <div class="button-mobile-container d-flex">
+      <!-- tampilan user guest -->
+      <a href="<?= site_url('/login') ?>" class="btn-login-mobile">Masuk ke Akun Saya</a>
+      <!-- tampilan user auth -->
+      <a href="<?= site_url('/register') ?>" class="btn-logout-mobile d-none">Keluar Dari Akun Saya</a>
+    </div>
+  </div>
+
+  <div class="banner-container d-flex">
+    <div class="heading-job-container">
+      <h2>Temukan Pekerjaan Impian
+        Dan Karir Sesuai Passionmu</h2>
+      <p class="sub-healine">Dapatkan pekerjaan sesuai minatmu disini</p>
+
+      <div class="form-search-container d-flex">
+        <div class="search-icon-container d-flex justify-content-center align-item-center">
+          <i class="bi bi-search"></i>
+        </div>
+
+        <form action="#" method="post" class="d-flex">
+          <input type="text" name="job-search" id="job-search" placeholder="ex: Frontend Web Developer">
+          <button type="submit">Search</button>
+        </form>
       </div>
 
-      <div class="navbar-link d-flex">
-        <a href="#" class="">Beranda</a>
-        <a href="#" class="">Perusahaan</a>
-        <a href="#" class="">Pekerjaan</a>
-      </div>
-
-      <div class="tombol-utility d-flex align-item-center">
-        <a href="#" class="active btn-login">Login</a>
-        <a href="#" class="btn-sign-up">Daftar</a>
-        <a href="#" class="btn-post-job">Post Job</a>
-
-        <div class="menu-mobile">
-          <i class="bi bi-three-dots mobile-menu"></i>
+      <div class="recenly-search-jobs d-flex align-item-center">
+        <p>Sering Dicari: </p>
+        <div class="keyword d-flex align-item-center">
+          <a href="#"><span>Fullstack</span></a>
+          <a href="#"><span>UI Designer</span></a>
+          <a href="#"><span>Cloud Engineer</span></a>
         </div>
       </div>
-    </nav>
-    <script src="assets/js/jobs-page.js" defer></script>
-  </body>
+
+    </div>
+
+    <div class="job-ilustration d-flex align-item-end justify-content-center">
+      <img src="assets/images/ilustrasi job@2x.png" width="500" alt="">
+    </div>
+  </div>
+
+  <div class="job-catagories-container">
+    <h3>Kategori Pekerjaan</h3>
+    <div class="job-list-categories">
+      <a href="#">
+        <i class="bi bi-image"></i>
+        Design Grafis
+      </a>
+      <a href="#">
+        <i class="bi bi-code-square"></i>
+        Development
+      </a>
+      <a href="#">
+        <i class="bi bi-hdd-network-fill"></i>
+        Networking
+      </a>
+      <a href="#">
+        <i class="bi bi-vector-pen"></i>
+        UI Designer
+      </a>
+      <a href="#">
+        <i class="bi bi-phone"></i>
+        UX Designer
+      </a>
+      <a href="#">
+        <i class="bi bi-shield-lock-fill"></i>
+        Cyber Security
+      </a>
+      <a href="#">
+        <i class="bi bi-meta"></i>
+        Digital Marketing
+      </a>
+      <a href="#">
+        <i class="bi bi-cloud-fill"></i>
+        Cloud Computing
+      </a>
+    </div>
+  </div>
+
+  <div class="featured-job-wrapper">
+    <h3>Pekerjaan Terkini</h3>
+
+    <div class="featured-job-container">
+
+      <div class="featured-job-card">
+        <div class="job-header d-flex align-item-center">
+          <img src="assets/images/google-logo.png" width="35" alt="company-logo">
+          <div class="job-title">
+            <a href="">
+              <h4 class="title">Software Developer</h4>
+            </a>
+            <p class="company-name">Google</p>
+          </div>
+        </div>
+        <div class="job-desc">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit....
+        </div>
+        <div class="job-footer d-flex justify-content-between">
+          <p class="location">
+            <i class="bi bi-geo-alt-fill"></i>
+            California
+          </p>
+          <div class="jobs-application">
+            <i class="bi bi-briefcase-fill"></i>
+            1234 pelamar
+          </div>
+        </div>
+      </div>
+
+      <div class="featured-job-card">
+        <div class="job-header d-flex align-item-center">
+          <img src="assets/images/google-logo.png" width="35" alt="company-logo">
+          <div class="job-title">
+            <a href="">
+              <h4 class="title">Software Developer</h4>
+            </a>
+            <p class="company-name">Google</p>
+          </div>
+        </div>
+        <div class="job-desc">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit....
+        </div>
+        <div class="job-footer d-flex justify-content-between">
+          <p class="location">
+            <i class="bi bi-geo-alt-fill"></i>
+            California
+          </p>
+          <div class="jobs-application">
+            <i class="bi bi-briefcase-fill"></i>
+            1234 pelamar
+          </div>
+        </div>
+      </div>
+
+      <div class="featured-job-card">
+        <div class="job-header d-flex align-item-center">
+          <img src="assets/images/google-logo.png" width="35" alt="company-logo">
+          <div class="job-title">
+            <a href="">
+              <h4 class="title">Software Developer</h4>
+            </a>
+            <p class="company-name">Google</p>
+          </div>
+        </div>
+        <div class="job-desc">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit....
+        </div>
+        <div class="job-footer d-flex justify-content-between">
+          <p class="location">
+            <i class="bi bi-geo-alt-fill"></i>
+            California
+          </p>
+          <div class="jobs-application">
+            <i class="bi bi-briefcase-fill"></i>
+            1234 pelamar
+          </div>
+        </div>
+      </div>
+
+      <div class="featured-job-card">
+        <div class="job-header d-flex align-item-center">
+          <img src="assets/images/google-logo.png" width="35" alt="company-logo">
+          <div class="job-title">
+            <a href="">
+              <h4 class="title">Software Developer</h4>
+            </a>
+            <p class="company-name">Google</p>
+          </div>
+        </div>
+        <div class="job-desc">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit....
+        </div>
+        <div class="job-footer d-flex justify-content-between">
+          <p class="location">
+            <i class="bi bi-geo-alt-fill"></i>
+            California
+          </p>
+          <div class="jobs-application">
+            <i class="bi bi-briefcase-fill"></i>
+            1234 pelamar
+          </div>
+        </div>
+      </div>
+
+      <div class="featured-job-card">
+        <div class="job-header d-flex align-item-center">
+          <img src="assets/images/google-logo.png" width="35" alt="company-logo">
+          <div class="job-title">
+            <a href="">
+              <h4 class="title">Software Developer</h4>
+            </a>
+            <p class="company-name">Google</p>
+          </div>
+        </div>
+        <div class="job-desc">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit....
+        </div>
+        <div class="job-footer d-flex justify-content-between">
+          <p class="location">
+            <i class="bi bi-geo-alt-fill"></i>
+            California
+          </p>
+          <div class="jobs-application">
+            <i class="bi bi-briefcase-fill"></i>
+            1234 pelamar
+          </div>
+        </div>
+      </div>
+
+      <div class="featured-job-card">
+        <div class="job-header d-flex align-item-center">
+          <img src="assets/images/google-logo.png" width="35" alt="company-logo">
+          <div class="job-title">
+            <a href="">
+              <h4 class="title">Software Developer</h4>
+            </a>
+            <p class="company-name">Google</p>
+          </div>
+        </div>
+        <div class="job-desc">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit....
+        </div>
+        <div class="job-footer d-flex justify-content-between">
+          <p class="location">
+            <i class="bi bi-geo-alt-fill"></i>
+            California
+          </p>
+          <div class="jobs-application">
+            <i class="bi bi-briefcase-fill"></i>
+            1234 pelamar
+          </div>
+        </div>
+      </div>
+
+      <div class="featured-job-card">
+        <div class="job-header d-flex align-item-center">
+          <img src="assets/images/google-logo.png" width="35" alt="company-logo">
+          <div class="job-title">
+            <a href="">
+              <h4 class="title">Software Developer</h4>
+            </a>
+            <p class="company-name">Google</p>
+          </div>
+        </div>
+        <div class="job-desc">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit....
+        </div>
+        <div class="job-footer d-flex justify-content-between">
+          <p class="location">
+            <i class="bi bi-geo-alt-fill"></i>
+            California
+          </p>
+          <div class="jobs-application">
+            <i class="bi bi-briefcase-fill"></i>
+            1234 pelamar
+          </div>
+        </div>
+      </div>
+
+      <div class="featured-job-card">
+        <div class="job-header d-flex align-item-center">
+          <img src="assets/images/google-logo.png" width="35" alt="company-logo">
+          <div class="job-title">
+            <a href="">
+              <h4 class="title">Software Developer</h4>
+            </a>
+            <p class="company-name">Google</p>
+          </div>
+        </div>
+        <div class="job-desc">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit....
+        </div>
+        <div class="job-footer d-flex justify-content-between">
+          <p class="location">
+            <i class="bi bi-geo-alt-fill"></i>
+            California
+          </p>
+          <div class="jobs-application">
+            <i class="bi bi-briefcase-fill"></i>
+            1234 pelamar
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="more-jobs d-flex justify-content-center">
+      <a href="job-list.html" target="_self" rel="noopener noreferrer" class="btn-primary">Lebih banyak pekerjaan</a>
+    </div>
+  </div>
+
+  <div class="world-top-company">
+    <img src="assets/images/ilustrasi post job.svg" alt="ilustrasi-post--job">
+    <div class="company-desc">
+      <h3>Tersedia Lebih 1000+ Telent Ready Dengan Keahlian Profesional</h4>
+        <p>Hire tenaga professional dengan berbagai pengalaman dan keahlian yang siap untuk berkontribusi di perusahan
+          anda</p>
+    </div>
+  </div>
+
+  <a href="pages-login.html" class="btn-world-company">Post a Jobs</a>
+
+  <script src="assets/js/jobs-page.js" defer></script>
+</body>
+
 </html>
