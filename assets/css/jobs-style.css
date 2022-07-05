@@ -349,10 +349,71 @@ a {
   margin-right: 5px;
 }
 
-a.btn-world-company {
-  color: #1560aa;
+.btn-world-company {
+  margin-top: 40px;
 }
 
+.btn-world-company a {
+  padding: 0.8em 1.8em;
+  background-color: #1b74ce;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.world-top-company {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 50px;
+  align-items: center;
+}
+
+.world-top-company img {
+  width: 600px;
+}
+
+.world-top-company .company-desc-header h3 {
+  font-size: 2em;
+}
+
+.world-top-company .company-desc-header p {
+  margin-top: 24px;
+}
+
+.world-top-company .company-desc-header {
+  padding: 0px 40px 0px 0px;
+}
+
+.footer {
+  background-color: #f2feff;
+  padding: 30px 50px 20px 50px;
+  margin-top: 50px;
+}
+
+.footer-brand {
+  border-bottom: 1px solid #e2e2e2;
+  padding-bottom: 15px;
+}
+
+.footer .footer-brand img {
+  width: 140px;
+}
+
+.sosmed-icon-footer span {
+  margin-left: 10px;
+}
+
+.sosmed-icon-footer span i {
+  font-size: 22px;
+  color: rgb(54, 54, 54);
+}
+
+.footer .footer-bottom span {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
 /* end styling job categories */
 
 @media screen and (min-width: 1000px) {
@@ -361,6 +422,11 @@ a.btn-world-company {
   }
 
   .btn-primary:hover {
+    background-color: #1560aa;
+    transition: background-color 0.3s;
+  }
+
+  .btn-world-company a:hover {
     background-color: #1560aa;
     transition: background-color 0.3s;
   }
@@ -531,6 +597,7 @@ a.btn-world-company {
     padding: 15px;
     overflow: hidden;
     margin-top: 80px;
+    display: block;
   }
 
   .world-top-company img {
@@ -541,13 +608,51 @@ a.btn-world-company {
     margin-top: 23px;
   }
 
+  .world-top-company .company-desc .company-desc-header {
+    padding-right: 20px;
+  }
+
   .world-top-company .company-desc h3 {
     font-weight: 600;
+    font-size: 1.4em;
   }
 
   .world-top-company .company-desc p {
     margin-top: 16px;
     padding: 0px 20px 0px 0px;
+    font-size: 0.9em;
+  }
+
+  .footer {
+    background-color: #f2feff;
+    padding: 30px 20px 20px 20px;
+    margin-top: 50px;
+  }
+
+  .footer-brand {
+    border-bottom: 1px solid #e2e2e2;
+    padding-bottom: 15px;
+  }
+
+  .footer .footer-brand img {
+    width: 140px;
+  }
+
+  .sosmed-icon-footer span {
+    margin-left: 10px;
+  }
+
+  .sosmed-icon-footer span i {
+    font-size: 22px;
+    color: rgb(54, 54, 54);
+  }
+
+  .footer .footer-bottom span {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
   }
 }
 

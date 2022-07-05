@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#E7F8FF" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="keyword" content="Web Design, Web Development, Android, UI UX Design" />
+    <meta name="description" content="Belajar membuat web, aplikasi android, dan mendesign UI UX" />
+    <meta name="author" content="Yota Nehru" />
+    <link rel="apple-touch-startup-image" href="assets/images/Logo Gotrain.png" />
+    <link rel="apple-touch-icon" href="assets/images/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css" />
+    <title>GoTrain Jobs - Temukan Karirmu Disini</title>
+    <link rel="stylesheet" href="assets/css/jobs-list.css" />
+</head>
+
+<body>
+    <nav class="navbar d-flex justify-content-between align-item-center">
+        <div class="navbar-brand">
+            <a href="#">
+                <img src="assets/images/Logo GoJobs.svg" alt="gojobs-logo" />
+            </a>
+        </div>
+
+        <div class="navbar-link d-flex">
+            <a href="<?= site_url('/') ?>" class="">Beranda</a>
+            <a href="<?= site_url('/job-list') ?>" class="">Pekerjaan</a>
+            <a href="<?= site_url('/company') ?>" class="">Perusahaan</a>
+        </div>
+
+        <div class="tombol-utility d-flex align-item-center">
+            <!-- <a href="<?= site_url('/login') ?>" class="active btn-login">Login</a> -->
+            <a href="<?= site_url('/register') ?>" class="btn-sign-up">Daftar</a>
+            <a href="<?= site_url('/login') ?>" class="btn-post-job">Post Job</a>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <i class="bi bi-three-dots mobile-menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="navbar-link-mobile" id="navbar-link-mobile">
+        <a href="<?= site_url('/') ?>">Beranda</a>
+        <a href="<?= site_url('/job-list') ?>">Pekerjaan</a>
+        <a href="<?= site_url('/company') ?>">Perusahaan</a>
+        <div class="button-mobile-container d-flex">
+            <!-- tampilan user guest -->
+            <a href="<?= site_url('/login') ?>" class="btn-login-mobile">Masuk ke Akun Saya</a>
+            <!-- tampilan user auth -->
+            <a href="<?= site_url('/register') ?>" class="btn-logout-mobile d-none">Keluar Dari Akun Saya</a>
+        </div>
+    </div>
+
+    <div class="search-banner">
+        <form action="#" method="post" class="form-job-search">
+            <div class="job-search-container">
+                <label for="job-search">Temukan Pekerjaan</label>
+                <input type="text" name="job-search" id="job-search" placeholder="ex: Design Grafis, Software Engineer">
+            </div>
+
+            <div class="job-search-container">
+                <label for="job-search">Lokasi di</label>
+                <input type="text" name="job-search-location" id="job-search-location" placeholder="ex: Jakarta">
+            </div>
+            <button type="submit">
+                <i class="bi bi-search"></i>
+            </button>
+        </form>
+    </div>
+
+    <div class="search-banner-mobile">
+        <form action="#" method="post" class="form-job-search-mobile">
+            <input type="text" name="job-search" id="job-search-mobile"
+                placeholder="ex: Design Grafis, Software Engineer">
+            <a href="#">
+                <div class="toggle d-flex justify-content-center align-item-center fd-column" id="filter-mobile">
+                    <i class="bi bi-toggles2"></i>
+                    Filter
+                </div>
+            </a>
+        </form>
+    </div>
+
+    <div class="jobs-filter-mobile" id="jobs-filter-mobile">
+        <a href="#" class="d-flex justify-content-between">
+            Software Engineer
+            <i class="bi bi-caret-right-fill"></i>
+        </a>
+        <a href="#" class="d-flex justify-content-between">
+            Network Engineer
+            <i class="bi bi-caret-right-fill"></i>
+        </a>
+        <a href="#" class="d-flex justify-content-between">
+            System Analyst
+            <i class="bi bi-caret-right-fill"></i>
+        </a>
+        <a href="#" class="d-flex justify-content-between">
+            Bussiness Analyst
+            <i class="bi bi-caret-right-fill"></i>
+        </a>
+        <a href="#" class="d-flex justify-content-between">
+            Human Resource
+            <i class="bi bi-caret-right-fill"></i>
+        </a>
+        <a href="#" class="d-flex justify-content-between">
+            Digital Marketing
+            <i class="bi bi-caret-right-fill"></i>
+        </a>
+        <a href="#" class="d-flex justify-content-between">
+            IT Support
+            <i class="bi bi-caret-right-fill"></i>
+        </a>
+        <a href="#" class="d-flex justify-content-between">
+            UI Designer
+            <i class="bi bi-caret-right-fill"></i>
+        </a>
+        <a href="#" class="d-flex justify-content-between">
+            UX Designer
+            <i class="bi bi-caret-right-fill"></i>
+        </a>
+        <a href="#" class="d-flex justify-content-between">
+            Product Designer
+            <i class="bi bi-caret-right-fill"></i>
+        </a>
+    </div>
+
+    <div class="jobs-list-container">
+        <div class="jobs-list-filter">
+            <div class="jobs-filter">
+                <div class="filter-head">
+                    <span>
+                        <i class="bi bi-collection"></i>
+                        Filter Cepat</span>
+                </div>
+
+                <a href="#" class="d-flex justify-content-between">
+                    Software Engineer
+                    <i class="bi bi-caret-right-fill"></i>
+                </a>
+                <a href="#" class="d-flex justify-content-between">
+                    Network Engineer
+                    <i class="bi bi-caret-right-fill"></i>
+                </a>
+                <a href="#" class="d-flex justify-content-between">
+                    System Analyst
+                    <i class="bi bi-caret-right-fill"></i>
+                </a>
+                <a href="#" class="d-flex justify-content-between">
+                    Bussiness Analyst
+                    <i class="bi bi-caret-right-fill"></i>
+                </a>
+                <a href="#" class="d-flex justify-content-between">
+                    Human Resource
+                    <i class="bi bi-caret-right-fill"></i>
+                </a>
+                <a href="#" class="d-flex justify-content-between">
+                    Digital Marketing
+                    <i class="bi bi-caret-right-fill"></i>
+                </a>
+                <a href="#" class="d-flex justify-content-between">
+                    IT Support
+                    <i class="bi bi-caret-right-fill"></i>
+                </a>
+                <a href="#" class="d-flex justify-content-between">
+                    UI Designer
+                    <i class="bi bi-caret-right-fill"></i>
+                </a>
+                <a href="#" class="d-flex justify-content-between">
+                    UX Designer
+                    <i class="bi bi-caret-right-fill"></i>
+                </a>
+                <a href="#" class="d-flex justify-content-between">
+                    Product Designer
+                    <i class="bi bi-caret-right-fill"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="jobs-list">
+            <h3>Pekerjaan Hari Ini</h3>
+            <p class="last-update">last update <b>29 Juni 2022</b></p>
+
+            <div class="job-list-card">
+                <div class="job-card-list-header d-flex justify-content-between">
+                    <p>Melihat 1 - 25 dari 1290</p>
+                    <p class="contract" id="contract">Jenis Kontrak
+                        <i class="bi bi-caret-down-fill"></i>
+                    </p>
+                    <div class="contract-filter" id="contract-filter">
+                        <a href="#">Penuh Time</a>
+                        <a href="#">Paruh Time</a>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-card-haader d-flex align-item-center">
+                        <div class="company-profile-pic d-flex align-item-center">
+                            <img src="assets/images/google-logo.png" alt="company-logo">
+                            <!-- <img src="https://ui-avatars.com/api/?name=Google" class="d-block"> -->
+                        </div>
+                        <div class="job-title">
+                            <a href="#">
+                                <h4>Sofware Engineering Manager - Audio Research</h4>
+                            </a>
+                            <p>Provided by Google</p>
+                        </div>
+                    </div>
+
+                    <div class="job-card-desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, excepturi neque
+                            similique provident sequi totam ipsa enim eveniet amet! Reiciendis deleniti nulla
+                            exercitationem ea sed quo voluptatem tenetur animi illum?</p>
+                    </div>
+
+                    <div class="job-card-footer d-flex justify-content-between">
+                        <div class="job-location">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Jakarta
+                        </div>
+                        <div class="job-application-submit">
+                            <i class="bi bi-briefcase-fill"></i>
+                            1334 Pelamar
+                        </div>
+                        <div class="job-contract">
+                            <i class="bi bi-clock-history"></i>
+                            Paruh Waktu
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-card-haader d-flex align-item-center">
+                        <div class="company-profile-pic d-flex align-item-center">
+                            <img src="assets/images/google-logo.png" alt="company-logo">
+                            <!-- <img src="https://ui-avatars.com/api/?name=Google" class="d-block"> -->
+                        </div>
+                        <div class="job-title">
+                            <a href="#">
+                                <h4>Sofware Engineering Manager - Audio Research</h4>
+                            </a>
+                            <p>Provided by Google</p>
+                        </div>
+                    </div>
+
+                    <div class="job-card-desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, excepturi neque
+                            similique provident sequi totam ipsa enim eveniet amet! Reiciendis deleniti nulla
+                            exercitationem ea sed quo voluptatem tenetur animi illum?</p>
+                    </div>
+
+                    <div class="job-card-footer d-flex justify-content-between">
+                        <div class="job-location">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Jakarta
+                        </div>
+                        <div class="job-application-submit">
+                            <i class="bi bi-briefcase-fill"></i>
+                            1334 Pelamar
+                        </div>
+                        <div class="job-contract">
+                            <i class="bi bi-clock-fill"></i>
+                            Penuh Waktu
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-card-haader d-flex align-item-center">
+                        <div class="company-profile-pic d-flex align-item-center">
+                            <img src="assets/images/google-logo.png" alt="company-logo">
+                            <!-- <img src="https://ui-avatars.com/api/?name=Google" class="d-block"> -->
+                        </div>
+                        <div class="job-title">
+                            <a href="#">
+                                <h4>Sofware Engineering Manager - Audio Research</h4>
+                            </a>
+                            <p>Provided by Google</p>
+                        </div>
+                    </div>
+
+                    <div class="job-card-desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, excepturi neque
+                            similique provident sequi totam ipsa enim eveniet amet! Reiciendis deleniti nulla
+                            exercitationem ea sed quo voluptatem tenetur animi illum?</p>
+                    </div>
+
+                    <div class="job-card-footer d-flex justify-content-between">
+                        <div class="job-location">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Jakarta
+                        </div>
+                        <div class="job-application-submit">
+                            <i class="bi bi-briefcase-fill"></i>
+                            1334 Pelamar
+                        </div>
+                        <div class="job-contract">
+                            <i class="bi bi-clock-history"></i>
+                            Paruh Waktu
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-card-haader d-flex align-item-center">
+                        <div class="company-profile-pic d-flex align-item-center">
+                            <img src="assets/images/google-logo.png" alt="company-logo">
+                            <!-- <img src="https://ui-avatars.com/api/?name=Google" class="d-block"> -->
+                        </div>
+                        <div class="job-title">
+                            <a href="#">
+                                <h4>Sofware Engineering Manager - Audio Research</h4>
+                            </a>
+                            <p>Provided by Google</p>
+                        </div>
+                    </div>
+
+                    <div class="job-card-desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, excepturi neque
+                            similique provident sequi totam ipsa enim eveniet amet! Reiciendis deleniti nulla
+                            exercitationem ea sed quo voluptatem tenetur animi illum?</p>
+                    </div>
+
+                    <div class="job-card-footer d-flex justify-content-between">
+                        <div class="job-location">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Jakarta
+                        </div>
+                        <div class="job-application-submit">
+                            <i class="bi bi-briefcase-fill"></i>
+                            1334 Pelamar
+                        </div>
+                        <div class="job-contract">
+                            <i class="bi bi-clock-fill"></i>
+                            Penuh Waktu
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-card-haader d-flex align-item-center">
+                        <div class="company-profile-pic d-flex align-item-center">
+                            <img src="assets/images/google-logo.png" alt="company-logo">
+                            <!-- <img src="https://ui-avatars.com/api/?name=Google" class="d-block"> -->
+                        </div>
+                        <div class="job-title">
+                            <a href="#">
+                                <h4>Sofware Engineering Manager</h4>
+                            </a>
+                            <p>Provided by Google</p>
+                        </div>
+                    </div>
+
+                    <div class="job-card-desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, excepturi neque
+                            similique provident sequi totam ipsa enim eveniet amet! Reiciendis deleniti nulla
+                            exercitationem ea sed quo voluptatem tenetur animi illum?</p>
+                    </div>
+
+                    <div class="job-card-footer d-flex justify-content-between">
+                        <div class="job-location">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Jakarta
+                        </div>
+                        <div class="job-application-submit">
+                            <i class="bi bi-briefcase-fill"></i>
+                            1334 Pelamar
+                        </div>
+                        <div class="job-contract">
+                            <i class="bi bi-clock-history"></i>
+                            Paruh Waktu
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-card-haader d-flex align-item-center">
+                        <div class="company-profile-pic d-flex align-item-center">
+                            <img src="assets/images/google-logo.png" alt="company-logo">
+                            <!-- <img src="https://ui-avatars.com/api/?name=Google" class="d-block"> -->
+                        </div>
+                        <div class="job-title">
+                            <a href="#">
+                                <h4>Sofware Engineering Manager - Audio Research</h4>
+                            </a>
+                            <p>Provided by Google</p>
+                        </div>
+                    </div>
+
+                    <div class="job-card-desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, excepturi neque
+                            similique provident sequi totam ipsa enim eveniet amet! Reiciendis deleniti nulla
+                            exercitationem ea sed quo voluptatem tenetur animi illum?</p>
+                    </div>
+
+                    <div class="job-card-footer d-flex justify-content-between">
+                        <div class="job-location">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Jakarta
+                        </div>
+                        <div class="job-application-submit">
+                            <i class="bi bi-briefcase-fill"></i>
+                            1334 Pelamar
+                        </div>
+                        <div class="job-contract">
+                            <i class="bi bi-clock-fill"></i>
+                            Penuh Waktu
+                        </div>
+                    </div>
+                </div>
+
+                <div class="jobs-pagination">
+                    <p class="indicator-status">
+                        Melihat 1 - 25 dari 1290
+                    </p>
+                    <div class="navigation-tombol d-flex">
+                        <a href="#" class="prev d-none">Sebelumnya</a>
+                        <a href="#" class="next">Selanjutnya</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-brand d-flex align-item-center justify-content-between">
+            <img src="assets/images/Logo GoJobs.svg" alt="footer-logo">
+            <div class="sosmed-icon-footer">
+                <span><a href="https://www.instagram.com"><i class="bi bi-instagram"></i></a></span>
+                <span><a href="https://www.linkedin.com"><i class="bi bi-linkedin"></i></a></span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>Copyright ©2022 GoTrain. All Rights Reserved.</span>
+        </div>
+    </div>
+
+    <script src=" assets/js/job-list.js"></script>
+</body>
+
+</html>
