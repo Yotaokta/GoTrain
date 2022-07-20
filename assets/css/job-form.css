@@ -1,0 +1,529 @@
+/* global style */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.d-block {
+  display: block;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.align-item-center {
+  align-items: center;
+}
+
+.align-item-end {
+  align-items: flex-end;
+}
+
+.fd-column {
+  flex-direction: column;
+  -ms-flex-direction: column;
+}
+
+.col-gap-1 {
+  column-gap: 10px;
+  -moz-column-gap: 10px;
+}
+
+.col-gap-2 {
+  column-gap: 20px;
+  -moz-column-gap: 20px;
+}
+
+.row-gap-1 {
+  row-gap: 10px;
+}
+
+.row-gap-2 {
+  row-gap: 20px;
+}
+
+.btn-primary {
+  background-color: #0073e9;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  font-family: "Poppins", sans-serif;
+}
+
+/* navbar styling */
+.navbar {
+  padding: 10px 50px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 0px 5px rgba(151, 151, 151, 0.2);
+}
+
+.navbar-brand img {
+  width: 140px;
+}
+
+.navbar-link {
+  width: 370px;
+  column-gap: 25px;
+  -moz-column-gap: 25px;
+}
+
+.navbar-link a {
+  padding: 0.6em 0.6em 7px 0.6em;
+}
+
+.navbar-link a:hover {
+  border-bottom: 1px solid #0073e9;
+}
+
+.navbar-link a.active:hover {
+  color: #fff;
+  background-color: #3595f5;
+}
+
+.tombol-utility {
+  column-gap: 22px;
+  -moz-column-gap: 22px;
+}
+
+.tombol-utility a.btn-login:hover {
+  border-bottom: 1px solid #3595f5;
+  padding: 10px 0px;
+}
+
+.tombol-utility a.btn-sign-up {
+  border: 1px solid #3595f5;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.tombol-utility a.btn-sign-up:hover {
+  background-color: #f4faff;
+}
+
+.tombol-utility a.btn-post-job {
+  background-color: #0073e9;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.tombol-utility a.btn-post-job:hover {
+  background-color: #1b74ce;
+}
+
+.menu-mobile,
+.navbar-link-mobile {
+  display: none;
+}
+/* end of navbar styling */
+
+/* banner styling */
+
+.job-title-banner {
+  background-color: #1877f2;
+  padding: 150px 50px 100px 50px;
+}
+
+.job-title h2 {
+  font-weight: 500;
+  font-size: 35px;
+}
+
+.job-title {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  row-gap: 10px;
+}
+
+.job-title-metadata {
+  max-width: 35%;
+  column-gap: 50px;
+  -moz-column-gap: 50px;
+  margin-top: 13px;
+}
+
+.company-name {
+  column-gap: 15px;
+}
+
+/* end banner styling */
+
+/* styling step progres form */
+
+.container {
+  padding: 50px;
+  margin-top: 50px;
+  column-gap: 120px;
+  -moz-column-gap: 120px;
+}
+
+.step-progress-form .step-link {
+  display: flex;
+  column-gap: 8px;
+  -moz-column-gap: 8px;
+  margin-bottom: 17px;
+}
+
+.step-progress-form .step-link.active span {
+  background-color: #0073e9;
+  border-radius: 10px;
+  padding: 2px;
+}
+
+.step-progress-form .step-link.active p {
+  color: #000;
+}
+
+.step-progress-form .step-link span {
+  background-color: #d9ecff;
+  border-radius: 10px;
+  padding: 2px;
+}
+
+.step-progress-form .step-link p {
+  color: rgb(138, 138, 138);
+}
+
+/*end  styling step progres form */
+
+.form {
+  width: 100%;
+}
+
+.form-container {
+  width: 67%;
+}
+
+.form-input-container {
+  overflow: hidden;
+}
+
+.form-header {
+  margin-bottom: 25px;
+  line-height: 27px;
+}
+
+.form-header h2 {
+  font-weight: 500;
+}
+
+.form-header p {
+  font-weight: 300;
+}
+
+.form-header p a {
+  font-weight: 400;
+}
+
+.contact-person {
+  width: 100%;
+  overflow: hidden;
+}
+
+.contact-person input#fullname,
+input#address,
+input#email,
+input#phone,
+input#website {
+  padding: 13px 15px;
+  margin-top: 10px;
+  border: 1px solid #dadada;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85em;
+  margin-bottom: 20px;
+}
+
+.contact-person label i {
+  font-size: 8px;
+  color: #e90000;
+}
+
+.contact-person label {
+  font-size: 14px;
+}
+
+.contact-person label.resume {
+  display: flex;
+  flex-direction: column;
+  border: 1px dashed #7c7c7c;
+  padding: 45px;
+  width: 200px;
+  margin-top: 10px;
+  font-size: 1em;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.contact-person label.resume i {
+  color: #000;
+  font-size: 1.2em;
+}
+
+input.resume-upload {
+  display: none;
+}
+
+button.next {
+  background-color: #1161ca;
+  padding: 0.8em 1.7em;
+  width: fit-content;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+button.prev {
+  background-color: #f7faff;
+  padding: 0.8em 1.7em;
+  width: fit-content;
+  border: none;
+  color: rgb(65, 65, 65);
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  border: 1px solid #1161ca;
+  margin-right: 13px;
+}
+
+button.prev:hover {
+  background-color: #e6efff;
+  cursor: pointer;
+}
+
+button[disable="true"] {
+  cursor: not-allowed;
+  background-color: #77bbff;
+}
+
+.input-file-desc {
+  background-color: #dcfff1;
+  padding: 13px 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-file-desc i {
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.input-file-error {
+  padding: 10px 13px;
+  border-radius: 5px;
+  background-color: #ffa7a7;
+  display: none;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+/* styling contact person form */
+
+/* end contact person form */
+
+/* styling footer */
+
+.footer {
+  background-color: #f2feff;
+  padding: 30px 50px 20px 50px;
+}
+
+.footer-brand {
+  border-bottom: 1px solid #e2e2e2;
+  padding-bottom: 15px;
+}
+
+.footer .footer-brand img {
+  width: 140px;
+}
+
+.sosmed-icon-footer span {
+  margin-left: 10px;
+}
+
+.sosmed-icon-footer span i {
+  font-size: 22px;
+  color: rgb(54, 54, 54);
+}
+
+.footer .footer-bottom span {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.job-apply-mobile {
+  display: none;
+}
+
+/* end styling footer */
+
+@media screen and (max-width: 1000px) {
+  /* navbar mobile  */
+  .navbar {
+    padding: 10px 15px;
+    background-color: #fff;
+  }
+
+  .menu-mobile {
+    background-color: #eeeeeea6;
+    border-radius: 40px;
+    display: block;
+    transition: background-color 0.3s;
+    font-size: 20px;
+    padding: 0.4em 0.7em;
+  }
+
+  .menu-mobile:hover {
+    background-color: #e2e2e2a6;
+    cursor: pointer;
+  }
+
+  .navbar-link {
+    display: none !important;
+  }
+
+  .tombol-utility .btn-login {
+    display: none;
+  }
+
+  .tombol-utility .btn-sign-up {
+    display: none;
+  }
+
+  .tombol-utility {
+    column-gap: 15px;
+    -moz-column-gap: 15px;
+  }
+
+  .navbar-link-mobile {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0px 3px 3px rgba(151, 151, 151, 0.14);
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+    position: fixed;
+    top: 73px;
+  }
+
+  .job-title a {
+    border: 1px solid #ffffff;
+    width: fit-content;
+    padding: 0.8em 1.4em 0.8em 1.4em;
+    border-radius: 7px;
+    color: #fff;
+  }
+
+  .navbar-link-mobile a {
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .navbar-link-mobile a {
+    padding: 15px 20px;
+  }
+
+  .navbar-link-mobile a:hover {
+    background-color: #f4faff;
+  }
+
+  .button-mobile-container {
+    padding: 0.8em;
+  }
+
+  .button-mobile-container a.btn-login-mobile,
+  a.btn-logout-mobile {
+    padding: 0.7em 2em;
+    text-align: center;
+    color: #fff;
+    background-color: #1b74ce;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .button-mobile-container a.btn-logout-mobile {
+    background-color: #e90000;
+  }
+  /* end navbar mobile */
+
+  .job-title-banner {
+    padding: 107px 30px 35px 30px;
+    color: #fff;
+  }
+
+  .job-title-metadata {
+    flex-direction: column;
+    -ms-flex-direction: column;
+    row-gap: 5px;
+    max-width: 200px;
+  }
+
+  .job-title h2 {
+    font-weight: 500;
+    font-size: 7vw;
+  }
+
+  .job-title {
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .footer {
+    padding: 30px 25px 20px 25px;
+  }
+}
