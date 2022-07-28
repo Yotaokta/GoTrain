@@ -397,7 +397,95 @@ img.user-profil-mobile {
   padding: 50px;
 }
 
+.testimonial-card-container {
+  margin-top: 40px;
+  display: flex;
+  column-gap: 14px;
+  -moz-column-gap: 14px;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  width: 32.5%;
+}
+
+.testimonial-card .testimonial-header img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+}
+
+.testimonial-card .testimonial-content {
+  padding: 20px;
+}
+
+.testimonial-card .testimonial-content h3 {
+  font-size: 1.3em;
+  margin-bottom: 16px;
+}
+
+.testimonial-card .testimonial-content p {
+  font-size: 0.9em;
+}
+
+.testimonial-footer .title,
+.testimonial-footer .alumni-kelas {
+  font-size: 0.8em;
+  font-weight: 400;
+}
+
+.testimonial-header span {
+  background-color: rgb(0, 255, 21);
+  width: fit-content;
+  border-radius: 50px;
+  padding: 0.5em;
+  font-size: 0.9em;
+}
+
+.testimonial-header h2 {
+  margin-top: 10px;
+}
+
 /* end testimonial styling */
+
+/* footer */
+
+footer {
+  margin-top: 20px;
+  padding: 34px 20px 20px 20px;
+  background-color: #f9feff;
+}
+
+.footer-brand-logo {
+  width: 130px;
+}
+
+.footer-menu-up,
+.footer-menu-down {
+  display: inline;
+}
+
+.footer-menu-up a,
+.footer-menu-down a {
+  margin-left: 10px;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  font-size: 14px;
+}
+
+/* end footer */
 
 /* responsive */
 
@@ -645,20 +733,9 @@ img.user-profil-mobile {
     font-size: 0.9em;
   }
 
-  .testimonial-card-wrapper {
-    border-radius: 10px;
-    margin-top: 30px;
-    overflow: scroll;
-  }
-
   .testimonial-card-container {
-    overflow: scroll;
-    width: 304%;
-    display: flex;
-  }
-
-  .testimonial-card-wrapper::-webkit-scrollbar {
-    height: 3px;
+    display: block;
+    margin-top: 20px;
   }
 
   .testimonial-card {
@@ -667,7 +744,8 @@ img.user-profil-mobile {
     border-radius: 10px;
     margin-right: 8px;
     width: 100%;
-    position: relative;
+    margin-bottom: 10px;
+    box-shadow: none;
   }
 
   .testimonial-card .testimonial-header img {
@@ -705,7 +783,7 @@ img.user-profil-mobile {
 
   footer {
     margin-top: 20px;
-    padding: 34px 20px 15px 20px;
+    padding: 34px 20px 20px 20px;
     background-color: #f9feff;
   }
 
@@ -714,7 +792,9 @@ img.user-profil-mobile {
   }
 
   .footer-menu .menu {
-    margin-top: 20px;
+    margin-top: 30px;
+    display: flex;
+    column-gap: 10px;
   }
 
   .footer-menu .menu span {
@@ -722,14 +802,14 @@ img.user-profil-mobile {
     margin-bottom: 8px;
   }
 
-  .footer-menu .menu a {
-    color: #3d3d3d;
-    font-weight: 400;
-    width: fit-content;
-  }
-
-  .footer-menu .menu a:hover {
-    border-bottom: 1px solid #a8a8a8;
+  .footer-menu-up,
+  .footer-menu-down {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    row-gap: 10px;
+    font-size: 15px;
+    color: rgb(41, 41, 41);
   }
 
   .footer-bottom {
@@ -738,5 +818,6 @@ img.user-profil-mobile {
     justify-content: center;
     align-items: center;
     padding: 7px;
+    font-size: 14px;
   }
 }
